@@ -112,7 +112,7 @@ void printnode(char *trav){
     sprintf(print_string, "size=%u ", ((mymalloc_t *) trav)->size - sizeof(mymalloc_t));
     write_string(print_string, mystdout); 
     //sprintf(print_string, "size=%u ", ((mymalloc_t *) trav)->size);
-    sprintf(print_string, "status=%s \n", 
+    sprintf(print_string, "status=%s \r\n", 
             ((mymalloc_t *) trav)->free == 1? "free": "taken");
     write_string(print_string, mystdout); 
 }
@@ -147,7 +147,7 @@ void memorymap(){
         assert(((mymalloc_t *) trav)->size); 
         trav = trav + ((mymalloc_t *) trav)->size; 
     }
-    sprintf(print_string, "\n");
+    sprintf(print_string, "\r\n");
     write_string(print_string, mystdout); 
 }
 

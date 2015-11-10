@@ -14,7 +14,8 @@ void myassert(unsigned status,
         const char *actual, const char *expected){ 
     if (status == 0){ 
         char print_string[1000]; 
-        sprintf(print_string, "Assertion Error: \nExpected: %s\n", expected);
+        sprintf(print_string, 
+                "Assertion Error: \r\nExpected: %s\r\n", expected);
         write_string(print_string, mystdout); 
     } 
 }

@@ -19,9 +19,9 @@ void teststringandint(){
     char * string2; 
     unsigned * int2; 
     char * string3; 
-    sprintf(print_string, "%s\n", "********************");
+    sprintf(print_string, "%s\r\n", "********************");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "TEST STRING ALLOCATION");
+    sprintf(print_string, "%s\r\n", "TEST STRING ALLOCATION");
     write_string(print_string, mystdout); 
     string1 = ( char * ) mymalloc(MAX_STRING_SIZE); 
     string2 = ( char * ) mymalloc(MAX_STRING_SIZE); 
@@ -35,35 +35,35 @@ void teststringandint(){
     assert(!strcompare(string3, "three")); 
     *int2 = 10;  
     assert(*int2 == 10); 
-    sprintf(print_string, "%p is address of: %s\n", (void *)string1, string1);
+    sprintf(print_string, "%p is address of: %s\r\n", (void *)string1, string1);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%p is address of: %s\n", (void *)string2, string2);
+    sprintf(print_string, "%p is address of: %s\r\n", (void *)string2, string2);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%p is address of: %s\n", (void *)string3, string3);
+    sprintf(print_string, "%p is address of: %s\r\n", (void *)string3, string3);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%p is address of: %d\n", (void *)int2, *int2);
+    sprintf(print_string, "%p is address of: %d\r\n", (void *)int2, *int2);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "");
+    sprintf(print_string, "%s\r\n", "");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "Memory map after allocation");
+    sprintf(print_string, "%s\r\n", "Memory map after allocation");
     write_string(print_string, mystdout); 
     memorymap(); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string1);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string1);
     write_string(print_string, mystdout); 
     myfree(string1); 
     memorymap();  
     
-    sprintf(print_string, "Memory map after freeing string %s\n", string2);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string2);
     write_string(print_string, mystdout); 
     myfree(string2); 
     memorymap(); 
 
-    sprintf(print_string, "Memory map after freeing string %s\n", string3);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string3);
     write_string(print_string, mystdout); 
     myfree(string3); 
     memorymap(); 
 
-    sprintf(print_string, "Memory map after freeing int %d\n", *int2);
+    sprintf(print_string, "Memory map after freeing int %d\r\n", *int2);
     write_string(print_string, mystdout); 
     myfree(int2); 
     memorymap(); 
@@ -75,16 +75,16 @@ void teststringandint(){
 void testfree(){ 
     char print_string[1000]; 
     char * string1, *string2, *string3; 
-    sprintf(print_string, "%s\n", "********************");
+    sprintf(print_string, "%s\r\n", "********************");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "TEST FREE");
+    sprintf(print_string, "%s\r\n", "TEST FREE");
     write_string(print_string, mystdout); 
     string1 = (char * ) mymalloc(MAX_STRING_SIZE); 
     string2 = (char * ) mymalloc(MAX_STRING_SIZE); 
     string3 = (char * ) mymalloc(MAX_STRING_SIZE); 
-    sprintf(print_string, "%s\n", "");
+    sprintf(print_string, "%s\r\n", "");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "Memory map after allocation");
+    sprintf(print_string, "%s\r\n", "Memory map after allocation");
     write_string(print_string, mystdout); 
     memorymap(); 
     strcopy(string1, "hello"); 
@@ -93,13 +93,13 @@ void testfree(){
     assert(!strcompare(string2, "world")); 
     strcopy(string3, "!"); 
     assert(!strcompare(string3, "!")); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string2);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string2);
     write_string(print_string, mystdout); 
     myfree(string2); memorymap(); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string1);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string1);
     write_string(print_string, mystdout); 
     myfree(string1); memorymap(); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string3);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string3);
     write_string(print_string, mystdout); 
     myfree(string3); memorymap(); 
     memorymap(); 
@@ -112,9 +112,9 @@ void testfree(){
 void teststringallocation(){ 
     char print_string[1000]; 
     char * string1, *string2, *string3; 
-    sprintf(print_string, "%s\n", "********************");
+    sprintf(print_string, "%s\r\n", "********************");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "TEST STRING ALLOCATION");
+    sprintf(print_string, "%s\r\n", "TEST STRING ALLOCATION");
     write_string(print_string, mystdout); 
     string1 = (char * ) mymalloc(MAX_STRING_SIZE); 
     string2 = (char * ) mymalloc(MAX_STRING_SIZE); 
@@ -122,19 +122,19 @@ void teststringallocation(){
     strcopy(string1, "hello"); 
     strcopy(string2, "world"); 
     strcopy(string3, "and"); 
-    sprintf(print_string, "%p is the address of: %s\n", (void *)string1, string1);
+    sprintf(print_string, "%p is the address of: %s\r\n", (void *)string1, string1);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%p is the address of: %s\n", (void *)string2, string2);
+    sprintf(print_string, "%p is the address of: %s\r\n", (void *)string2, string2);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%p is the address of: %s\n", (void *)string3, string3);
+    sprintf(print_string, "%p is the address of: %s\r\n", (void *)string3, string3);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string2);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string2);
     write_string(print_string, mystdout); 
     myfree(string2); memorymap(); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string1);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string1);
     write_string(print_string, mystdout); 
     myfree(string1); memorymap(); 
-    sprintf(print_string, "Memory map after freeing string %s\n", string3);
+    sprintf(print_string, "Memory map after freeing string %s\r\n", string3);
     write_string(print_string, mystdout); 
     myfree(string3); memorymap(); 
 }
@@ -144,15 +144,15 @@ void teststringallocation(){
     unsigned randomaddr;  
     unsigned i; 
     unsigned * temp; 
-    sprintf(print_string, "%s\n", "********************");
+    sprintf(print_string, "%s\r\n", "********************");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "TEST RANDOMALIGN");
+    sprintf(print_string, "%s\r\n", "TEST RANDOMALIGN");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "Assigning Randomly 10 addresses with different sizes\n");
+    sprintf(print_string, "Assigning Randomly 10 addresses with different sizes\r\n");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "and freeing them\n");
+    sprintf(print_string, "and freeing them\r\n");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "Memory map before ..");
+    sprintf(print_string, "%s\r\n", "Memory map before ..");
     write_string(print_string, mystdout); 
     memorymap(); 
     for (i = 0; i < 10; ++i) {
@@ -162,9 +162,9 @@ void teststringallocation(){
         assert((unsigned) temp % 8 == 0); 
         myfree(temp); 
     }
-    sprintf(print_string, "%s\n", "");
+    sprintf(print_string, "%s\r\n", "");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "Memory map after ..");
+    sprintf(print_string, "%s\r\n", "Memory map after ..");
     write_string(print_string, mystdout); 
     memorymap(); 
 }
@@ -176,17 +176,17 @@ void testrandom(){
     char * strings[MAX_COUNT]; 
     unsigned i; 
     char * temp; 
-    sprintf(print_string, "%s\n", "********************");
+    sprintf(print_string, "%s\r\n", "********************");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "TEST RANDOM");
+    sprintf(print_string, "%s\r\n", "TEST RANDOM");
     write_string(print_string, mystdout); 
     randomcount = ((unsigned) random() % MAX_COUNT) ; 
     sprintf(print_string, 
-            "Assigning Randomly %d addresses\n", randomcount);
+            "Assigning Randomly %d addresses\r\n", randomcount);
     write_string(print_string, mystdout); 
-    sprintf(print_string, "and freeing them\n");
+    sprintf(print_string, "and freeing them\r\n");
     write_string(print_string, mystdout); 
-    sprintf(print_string, "%s\n", "Memory map before ..");
+    sprintf(print_string, "%s\r\n", "Memory map before ..");
     write_string(print_string, mystdout); 
     memorymap(); 
     for (i = 0; i < randomcount; ++i) {
@@ -199,7 +199,7 @@ void testrandom(){
         myfree(temp); 
         myfree(strings[i]); 
     }
-    sprintf(print_string, "%s\n", "Memory map after ..");
+    sprintf(print_string, "%s\r\n", "Memory map after ..");
     write_string(print_string, mystdout); 
     memorymap(); 
 }*/
@@ -209,7 +209,7 @@ void verify_memory_allocation_mymemory_testing(){
     if (!is_memory_initialized()){ 
         initmemory(); 
     }
-    sprintf(print_string, "%s\n", "MEMORY MAP BEFORE ANYTHING ..");
+    sprintf(print_string, "%s\r\n", "MEMORY MAP BEFORE ANYTHING ..");
     write_string(print_string, mystdout); 
     memorymap(); 
     teststringallocation(); 

@@ -25,7 +25,7 @@ int verify_map() {
 void print(node_type * environ){
     char print_string[1000]; 
     while(environ){
-        sprintf(print_string, "%s = %s\n", environ->key, environ->value);
+        sprintf(print_string, "%s = %s\r\n", environ->key, environ->value);
         write_string(print_string, mystdout); 
         environ = environ->next;
     }

@@ -26,11 +26,11 @@ void delay(unsigned long int limit) {
  * With 120 MHz clock, each loop is 4 cycles * (1/120,000,000) seconds cycle
  * time.  So, each loop is .0000000333 seconds = 33.333 nanoseconds.
  */ 
-/*void asmDelay(unsigned long int limit);
+void asmDelay(unsigned long int limit);
 __asm("\n\
 	.global	asmDelay\n\
 asmDelay:\n\
 	adds	r0,r0,#-1\n\
 	bne	asmDelay\n\
 	bx	lr\n\
-      ");*/
+      ");

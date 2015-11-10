@@ -64,13 +64,15 @@ int is_fd_inuse(int fd){
 }
 
 void print_fdtable(){ 
+    char print_string[1000]; 
     unsigned i; 
     for (i = 0; i < MAX_FILE_DESCRIPTORS; ++i) {
         if (is_fd_inuse(get_fd(fdtable[i].major_num, fdtable[i].minor_num))){ 
-            printf("%d) %s -> Major: %d, Minor: %d\n", i, 
+            sprintf(print_string, "%d) %s -> Major: %d, Minor: %d\r\n", i, 
                     get_device_path(fdtable[i].major_num, fdtable[i].minor_num), 
                     fdtable[i].major_num, 
                     fdtable[i].minor_num);
+            write_string(print_string, mystdout); 
         }
     }
 }

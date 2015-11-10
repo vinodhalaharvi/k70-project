@@ -307,7 +307,9 @@ long toUnsignedLong(char * string, int base){
     val = strtoul(string, &endptr, base);
     myassert ((!(errno == ERANGE && (val == LONG_MAX || val == LONG_MIN))
                 || (errno != 0 && val == 0)), "", 
-            "(!(errno == ERANGE && (val == LONG_MAX || val == LONG_MIN)) || (errno != 0 && val == 0))"); 
+            "(!(errno == ERANGE && (val == LONG_MAX  \
+            || val == LONG_MIN)) \
+            || (errno != 0 && val == 0))"); 
     myassert (endptr != string, "", "endptr != string"); 
     return 0;
 } 
@@ -331,7 +333,8 @@ int cmd_exit(int argc, char *argv[]){
 int cmd_help(int argc, char *argv[]){ 
     myassert(argc == 1, "", "argc == 1"); 
     char print_string[1000]; 
-    sprintf(print_string, "%s\r\n", "The following commands are available");
+    sprintf(print_string, "%s\r\n", 
+            "The following commands are available");
     write_string(print_string, mystdout); 
     int i = 0; 
     while(commands[i].name){ 
@@ -366,7 +369,8 @@ int  process_line(char line[LINE_MAX + 1], int *argc, char * argv[]) {
     //and non 0 is a failed exec
     result = do_command(line, argc, argv); 
     if (result != 0){ 
-        sprintf(print_string, "Non zero return value of %d while running command, %s\r\n", 
+        sprintf(print_string, 
+                "Non zero return value of %d while running command, %s\r\n", 
                 result, line);
         write_string(print_string, mystdout); 
     }
