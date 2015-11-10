@@ -26,6 +26,9 @@ CAPACITIVEPAD2	io.h	/^    CAPACITIVEPAD2,$/;"	e	enum:__anon5
 CAPACITIVEPAD3	io.h	/^    CAPACITIVEPAD3,$/;"	e	enum:__anon5
 CAPACITIVEPAD4	io.h	/^    CAPACITIVEPAD4 $/;"	e	enum:__anon5
 CHAR_EOF	main.c	41;"	d	file:
+CHAR_EOF	shell.c	21;"	d	file:
+CHAR_EOF	shell.c	25;"	d	file:
+COMMAND_NOT_FOUND	shell.c	/^    COMMAND_NOT_FOUND$/;"	e	enum:__anon10	file:
 DDR_CR00_DDRCLS_DDR	sdram.h	36;"	d
 DDR_CR00_DDRCLS_DDR2	sdram.h	38;"	d
 DDR_CR00_DDRCLS_LPDDR	sdram.h	37;"	d
@@ -110,9 +113,17 @@ LED_ORANGE_PORTA_BIT	leddriver.h	15;"	d
 LED_YELLOW	io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	e	enum:__anon6
 LED_YELLOW_PORTA_BIT	led.h	6;"	d
 LED_YELLOW_PORTA_BIT	leddriver.h	16;"	d
+LINE_MAX	shell.h	/^const int LINE_MAX = 256;$/;"	v
+MAX_COMMAND_LINE_ARGUMENTS	shell.c	32;"	d	file:
+MAX_COUNT	mymalloctesting.c	10;"	d	file:
 MAX_DEVICES	io.h	3;"	d
 MAX_FILE_DESCRIPTORS	io.h	4;"	d
-MAX_FS_ENTRIES	file.c	8;"	d	file:
+MAX_FS_ENTRIES	file.c	11;"	d	file:
+MAX_LIST_SIZE	map.h	8;"	d
+MAX_STRING_LARGE_SIZE	mymalloctesting.c	12;"	d	file:
+MAX_STRING_LARGE_SIZE	shell.c	31;"	d	file:
+MAX_STRING_LENGTH	shell.c	30;"	d	file:
+MAX_STRING_SIZE	mymalloctesting.c	11;"	d	file:
 MCM_CR_DDRSIZE_128_MBYTES	sdram.h	22;"	d
 MCM_CR_DDRSIZE_256_MBYTES	sdram.h	23;"	d
 MCM_CR_DDRSIZE_512_MBYTES	sdram.h	24;"	d
@@ -171,14 +182,15 @@ SIM_MCR_DDRCFG_DDR2_FULL_STRENGTH	sdram.h	19;"	d
 SIM_MCR_DDRCFG_DDR2_HALF_STRENGTH	sdram.h	17;"	d
 SIM_MCR_DDRCFG_LPDDR_FULL_STRENGTH	sdram.h	16;"	d
 SIM_MCR_DDRCFG_LPDDR_HALF_STRENGTH	sdram.h	15;"	d
+SUCCESS	shell.c	/^    SUCCESS, $/;"	e	enum:__anon10	file:
 SVCCapacitivePadInit	svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCCapacitivePadInit(int arg0) {$/;"	f
 SVCCapacitivePadInit	svc.c	/^void __attribute__((never_inline)) SVCCapacitivePadInit(int arg0) {$/;"	f
 SVCCapacitivePadRead	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCCapacitivePadRead(int arg0) {$/;"	f
 SVCCapacitivePadRead	svc.c	/^int __attribute__((never_inline)) SVCCapacitivePadRead(int arg0) {$/;"	f
-SVCCreate	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCCreate(char * arg0) {$/;"	f
-SVCCreate	svc.c	/^int __attribute__((never_inline)) SVCCreate(char * arg0) {$/;"	f
-SVCDelete	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCDelete(char * filepath) {$/;"	f
-SVCDelete	svc.c	/^int __attribute__((never_inline)) SVCDelete(char *filepath) {$/;"	f
+SVCCreate	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCCreate(const char * arg0) {$/;"	f
+SVCCreate	svc.c	/^int __attribute__((never_inline)) SVCCreate(const char * arg0) {$/;"	f
+SVCDelete	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCDelete(const char * filepath) {$/;"	f
+SVCDelete	svc.c	/^int __attribute__((never_inline)) SVCDelete(const char *filepath) {$/;"	f
 SVCFClose	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCFClose(int fd) {$/;"	f
 SVCFClose	svc.c	/^int __attribute__((never_inline)) SVCFClose(int fd) {$/;"	f
 SVCFgetc	svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCFgetc(int fd) {$/;"	f
@@ -263,13 +275,16 @@ _LCDCDRIVER_H	lcdcdriver.h	13;"	d
 _LCDC_H	lcdc.h	3;"	d
 _LEDDRIVER_H	leddriver.h	13;"	d
 _LED_H	led.h	2;"	d
+_MAP_H	map.h	2;"	d
 _MCG_H	mcg.h	13;"	d
+_MYMALLOCTESTING_	mymalloctesting.h	2;"	d
 _POTENTIAMETERDRIVER_H	potentiometerdriver.h	2;"	d
 _POTENTIOMETER_H	potentiometer.h	4;"	d
 _PROFONT_H	profont.h	13;"	d
 _PUSHBUTTONDRIVER_H	pushbuttondriver.h	13;"	d
 _PUSHBUTTON_H	pushbutton.h	2;"	d
 _SDRAM_H	sdram.h	13;"	d
+_SHELL_H	shell.h	2;"	d
 _SVC_H	svc.h	13;"	d
 _THERMISTORDRIVER_H	thermistordriver.h	2;"	d
 _THERMISTOR_H	thermistor.h	4;"	d
@@ -282,6 +297,7 @@ _file_t	file.h	/^typedef struct _file_t {$/;"	s
 _filepath_to_device_t	io.h	/^typedef struct _filepath_to_device_t {$/;"	s
 _lcdcd_t	lcdc.h	/^typedef struct _lcdcd_t {$/;"	s
 _led_t	led.h	/^typedef struct _led_t {$/;"	s
+_myclock_t	shell.h	/^typedef struct _myclock_t {$/;"	s
 _mymalloc_t	mymalloc.h	/^typedef struct _mymalloc_t {$/;"	s
 _node_t	file.h	/^typedef struct _node_t {$/;"	s
 _potentiometer_t	potentiometer.h	/^typedef struct _potentiometer_t {$/;"	s
@@ -291,12 +307,13 @@ _thermistor_t	thermistor.h	/^typedef struct _thermistor_t {$/;"	s
 _uart_t	uart.h	/^typedef struct _uart_t {$/;"	s
 align	mymalloc.c	/^unsigned align(unsigned value){ $/;"	f
 allocblock	file.c	/^void allocblock(node_t *node){ $/;"	f
-arg0	svc.c	/^		int arg0;$/;"	m	union:frame::__anon10	file:
-arg1	svc.c	/^		int arg1;$/;"	m	union:frame::__anon11	file:
-arg2	svc.c	/^		int arg2;$/;"	m	union:frame::__anon12	file:
-arg3	svc.c	/^		int arg3;$/;"	m	union:frame::__anon13	file:
+arg0	svc.c	/^		int arg0;$/;"	m	union:frame::__anon12	file:
+arg1	svc.c	/^		int arg1;$/;"	m	union:frame::__anon13	file:
+arg2	svc.c	/^		int arg2;$/;"	m	union:frame::__anon14	file:
+arg3	svc.c	/^		int arg3;$/;"	m	union:frame::__anon15	file:
 assert_memory_is_initialized	mymalloc.c	/^void assert_memory_is_initialized(){ $/;"	f
 boolean	common.h	/^typedef enum { false, true } boolean; $/;"	t	typeref:enum:__anon1
+calendar	shell.c	/^void calendar(unsigned long days, $/;"	f
 calibrate	capacitivepads.h	/^    void (*calibrate)(void); $/;"	m	struct:_capacitivepad_t
 capacitivepad_calibrate	capacitivepads.c	/^void capacitivepad_calibrate(void *minor_num){ $/;"	f
 capacitivepad_init	capacitivepads.c	/^int capacitivepad_init(void * minor_num){ $/;"	f
@@ -306,22 +323,48 @@ capacitivepad_t	capacitivepads.h	/^} capacitivepad_t;$/;"	t	typeref:struct:_capa
 capacitivepads	capacitivepads.c	/^capacitivepad_t capacitivepads[NUM_OF_CAPACITIVEPADS] = { $/;"	v
 cat	io.c	/^void cat(unsigned fd){ $/;"	f
 channel	capacitivepadsdriver.c	/^	int channel;$/;"	m	struct:electrodeHW	file:
+clobberspaces	shell.c	/^char *  clobberspaces(char * src, char delimiter){ $/;"	f
 close_fd	io.c	/^int close_fd(int fd){$/;"	f
+cmd_cat	shell.c	/^int cmd_cat(int argc, char *argv[]){$/;"	f
+cmd_date	shell.c	/^int cmd_date(int argc, char *argv[]){ $/;"	f
+cmd_delete_file	shell.c	/^int cmd_delete_file(int argc, char *argv[]){$/;"	f
+cmd_echo	shell.c	/^int cmd_echo(int argc, char *argv[]){ $/;"	f
+cmd_exit	shell.c	/^int cmd_exit(int argc, char *argv[]){ $/;"	f
+cmd_fclose	shell.c	/^int cmd_fclose(int argc, char *argv[]){$/;"	f
+cmd_fgetc	shell.c	/^int cmd_fgetc(int argc, char *argv[]){$/;"	f
+cmd_fopen	shell.c	/^int cmd_fopen(int argc, char *argv[]){$/;"	f
+cmd_fputc	shell.c	/^int cmd_fputc(int argc, char *argv[]){$/;"	f
+cmd_free	shell.c	/^int cmd_free(int argc, char *argv[]){$/;"	f
+cmd_help	shell.c	/^int cmd_help(int argc, char *argv[]){ $/;"	f
+cmd_ls	shell.c	/^int cmd_ls(int argc, char *argv[]){$/;"	f
+cmd_malloc	shell.c	/^int cmd_malloc(int argc, char *argv[]){$/;"	f
+cmd_memorymap	shell.c	/^int cmd_memorymap(int argc, char *argv[]){$/;"	f
+cmd_set	shell.c	/^int cmd_set(int argc, char *argv[]){ $/;"	f
+commandEntry	shell.c	/^struct commandEntry {$/;"	s	file:
+command_func_type	shell.h	/^typedef int (*command_func_type) (int argc, char * argv[]); $/;"	t
+commands	shell.c	/^} commands[] = {$/;"	v	typeref:struct:commandEntry
 console	lcdcConsole.h	/^struct console {$/;"	s
 console	lcdcdriver.c	/^static struct console console; $/;"	v	typeref:struct:console	file:
+contains	map.c	/^boolean contains(node_type * node, key_type key){$/;"	f
 counterRegister	capacitivepadsdriver.c	/^	uint16_t *counterRegister;$/;"	m	struct:electrodeHW	file:
 create_fd	io.c	/^int create_fd(int major_num, int minor_num){ $/;"	f
 create_file	file.c	/^void create_file(const char * filename){$/;"	f
 data	file.h	/^    void * data; $/;"	m	struct:_node_t
 data	mymalloc.h	/^    char * data[0]; $/;"	m	struct:_mymalloc_t
+data	shell.h	/^    } data; $/;"	m	struct:_myclock_t	typeref:struct:_myclock_t::__anon11
 defragment_memory	mymalloc.c	/^void defragment_memory(unsigned iterations){ $/;"	f
 delay	delay.c	/^void delay(unsigned long int limit) {$/;"	f
 delete_file	file.c	/^void delete_file(const char * filename){$/;"	f
+delete_key	map.c	/^void delete_key(node_type **head, key_type key){$/;"	f
 device	io.c	/^static struct device {$/;"	s	file:
 devices	io.c	/^} devices[MAX_DEVICES] = {$/;"	v	typeref:struct:device	file:
+do_command	shell.c	/^int do_command(char line[LINE_MAX + 1], int *argc, char * argv[]){ $/;"	f
+double_quote_check	shell.c	/^void double_quote_check(int *ch){ $/;"	f
 electrodeHW	capacitivepadsdriver.c	/^struct electrodeHW {$/;"	s	file:
 electrodeHW	capacitivepadsdriver.c	/^} electrodeHW[ELECTRODE_COUNT] =$/;"	v	typeref:struct:electrodeHW
 electrode_in	capacitivepadsdriver.c	/^int electrode_in(int electrodeNumber) {$/;"	f
+env	shell.c	/^static node_type * env = NULL; $/;"	v	file:
+error	shell.c	/^} error;$/;"	t	typeref:enum:__anon10	file:
 false	common.h	/^typedef enum { false, true } boolean; $/;"	e	enum:__anon1
 fdtable	io.c	/^static fdtable_t fdtable[MAX_FILE_DESCRIPTORS]; $/;"	v	file:
 fdtable_t	io.h	/^} fdtable_t;$/;"	t	typeref:struct:_fdtable_t
@@ -340,6 +383,10 @@ frame	svc.c	/^struct frame {$/;"	s	file:
 framebuffer	lcdcConsole.h	/^  uint32_t *framebuffer;	\/\/ Starting address of frame buffer in memory$/;"	m	struct:console
 free	mymalloc.h	/^    unsigned free; $/;"	m	struct:_mymalloc_t
 free_file_memory	file.c	/^void free_file_memory(node_t * node){$/;"	f
+functionp	shell.c	/^    int (*functionp)(int , char *[]);$/;"	m	struct:commandEntry	file:
+get	map.c	/^value_type get(node_type * node, key_type key){$/;"	f
+getNumDaysInThisMonth	shell.c	/^int getNumDaysInThisMonth(long year, long month){ $/;"	f
+get_command_function	shell.c	/^command_func_type get_command_function(char line[LINE_MAX+1], $/;"	f
 get_device_path	io.c	/^const char * get_device_path(unsigned major_num, unsigned minor_num){ $/;"	f
 get_fd	io.c	/^int get_fd(int major_num, int minor_num){ $/;"	f
 get_file_inode	file.c	/^int get_file_inode(const char * filepath){ $/;"	f
@@ -349,25 +396,35 @@ getcurrentprocessid	mymalloc.c	/^int getcurrentprocessid(){ $/;"	f
 getfile	file.c	/^file_t * getfile(void * minor_num){ $/;"	f
 height	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
 hole	mymalloc.c	/^int hole(char * trav){ $/;"	f
+hour	shell.h	/^        unsigned hour; $/;"	m	struct:_myclock_t::__anon11
 init	capacitivepads.h	/^    void (*init)(void); $/;"	m	struct:_capacitivepad_t
 init	io.c	/^    int (*init)(void * minor_num); $/;"	m	struct:device	file:
 init	lcdc.h	/^    void (*init)(void); $/;"	m	struct:_lcdcd_t
 init	led.h	/^    void (*init)(void); $/;"	m	struct:_led_t
 init	potentiometer.h	/^    void (*init)(void); $/;"	m	struct:_potentiometer_t
 init	pushbutton.h	/^    void (*init)(void); $/;"	m	struct:_pushbutton_t
+init	shell.c	/^void init(myclock_t *clock){ $/;"	f
 init	thermistor.h	/^    void (*init)(void); $/;"	m	struct:_thermistor_t
 init	uart.h	/^    void (*init)(void); $/;"	m	struct:_uart_t
 init_devices_fdtable	io.c	/^void init_devices_fdtable(){ $/;"	f
 init_fdtable	io.c	/^void init_fdtable(){ $/;"	f
+initialize_hardware	shell.c	/^void initialize_hardware(){ $/;"	f
 initmemory	mymalloc.c	/^unsigned initmemory(){ $/;"	f
 initmemory_ram	mymalloc.c	/^unsigned initmemory_ram(){ $/;"	f
 initmemory_sdram	mymalloc.c	/^unsigned initmemory_sdram(){ $/;"	f
 input_present	uart.h	/^    int (*input_present)(void); $/;"	m	struct:_uart_t
+inside_double_quote	shell.c	/^static int inside_double_quote = 0; $/;"	v	file:
+isSlash	shell.c	/^boolean isSlash(char ch){ $/;"	f
 is_fd_inuse	io.c	/^int is_fd_inuse(int fd){ $/;"	f
+is_leap_year	shell.c	/^boolean is_leap_year(int yearno){ $/;"	f
 is_memory_initialized	mymalloc.c	/^unsigned is_memory_initialized(){ $/;"	f
 isdevice	io.c	/^int isdevice(int major_num) { $/;"	f
 isfile	io.c	/^int isfile(int major_num){ $/;"	f
 isfileexists	file.c	/^unsigned isfileexists(const char * filepath){ $/;"	f
+isline	shell.c	/^boolean isline(char line[LINE_MAX +1]){ $/;"	f
+join	shell.c	/^char *join(char * stringArray[], const char * delimiter){ $/;"	f
+key	map.h	/^    key_type key; $/;"	m	struct:node_type
+key_type	map.h	/^typedef const char * key_type; $/;"	t
 lcdcConsoleClear	lcdcConsole.c	/^void lcdcConsoleClear(struct console *console) {$/;"	f
 lcdcConsoleInit	lcdcConsole.c	/^void lcdcConsoleInit(struct console *console) {$/;"	f
 lcdcConsolePutc	lcdcConsole.c	/^void lcdcConsolePutc(struct console *console, int ch) {$/;"	f
@@ -405,14 +462,16 @@ led_minor_device	io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BL
 led_t	led.h	/^} led_t;$/;"	t	typeref:struct:_led_t
 led_write	led.c	/^int led_write(int ch, void *minor_num){ $/;"	f
 leds	led.c	/^led_t leds[NUM_OF_LEDS] = { $/;"	v
-lr	svc.c	/^		int lr;$/;"	m	union:frame::__anon14	file:
+lr	svc.c	/^		int lr;$/;"	m	union:frame::__anon16	file:
 ls	file.c	/^void ls(){$/;"	f
 main	main.c	/^int main(void) {$/;"	f
+main	shell.c	/^int main() {$/;"	f
 major_device	io.h	/^} major_device; $/;"	t	typeref:enum:__anon4
 major_num	io.h	/^    int major_num; $/;"	m	struct:_fdtable_t
 major_num	io.h	/^    unsigned major_num; $/;"	m	struct:_filepath_to_device_t
 majorno	io.h	/^    int majorno; $/;"	m	struct:_stream_t
 mask	capacitivepadsdriver.c	/^	uint32_t mask;$/;"	m	struct:electrodeHW	file:
+match	map.c	/^boolean match(key_type key, key_type otherkey) { $/;"	f
 mcgInit	mcg.c	/^void mcgInit(void) {$/;"	f
 memory_end	mymalloc.c	/^static char * memory_end; $/;"	v	file:
 memorymap	mymalloc.c	/^void memorymap(){ $/;"	f
@@ -421,7 +480,10 @@ merge	mymalloc.c	/^void merge(char * trav){ $/;"	f
 minor_num	io.h	/^    int minor_num; $/;"	m	struct:_fdtable_t
 minor_num	io.h	/^    unsigned minor_num; $/;"	m	struct:_filepath_to_device_t
 minorno	io.h	/^    int minorno; $/;"	m	struct:_stream_t
+minute	shell.h	/^        unsigned minute; $/;"	m	struct:_myclock_t::__anon11
+months	shell.c	/^const char * months[12]= { $/;"	v
 myassert	common.c	/^void myassert(unsigned status, $/;"	f
+myclock_t	shell.h	/^} myclock_t;$/;"	t	typeref:struct:_myclock_t
 myclose	io.c	/^int myclose(int fd){ $/;"	f
 myfree	mymalloc.c	/^void myfree(void *addr){ $/;"	f
 mymalloc	mymalloc.c	/^void * mymalloc(unsigned size){ $/;"	f
@@ -431,11 +493,15 @@ myread	io.c	/^int myread(int fd){ $/;"	f
 mystdin	common.c	/^unsigned mystdin; $/;"	v
 mystdout	common.c	/^unsigned mystdout; $/;"	v
 mywrite	io.c	/^int mywrite(int fd, int ch){ $/;"	f
+name	shell.c	/^    const char *name;$/;"	m	struct:commandEntry	file:
 newfile	file.c	/^file_t * newfile(){ $/;"	f
 next	file.h	/^    struct _node_t *next; $/;"	m	struct:_node_t	typeref:struct:_node_t::_node_t
+next	map.h	/^    struct node_type * next; $/;"	m	struct:node_type	typeref:struct:node_type::node_type
 next	mymalloc.c	/^char * next(char *trav){ $/;"	f
 node	file.h	/^    node_t *node; $/;"	m	struct:_file_t
 node_t	file.h	/^} node_t;$/;"	t	typeref:struct:_node_t
+node_type	map.h	/^typedef struct node_type {$/;"	s
+node_type	map.h	/^} node_type;$/;"	t	typeref:struct:node_type
 offset	file.h	/^    unsigned offset;$/;"	m	struct:_file_t
 pid	mymalloc.h	/^    unsigned pid;$/;"	m	struct:_mymalloc_t
 potentiometer_driver_init	potentiometerdriver.c	/^void potentiometer_driver_init(void) {$/;"	f
@@ -446,8 +512,13 @@ potentiometer_read	potentiometer.c	/^int potentiometer_read(void *minor_num){ $/
 potentiometer_t	potentiometer.h	/^} potentiometer_t;$/;"	t	typeref:struct:_potentiometer_t
 potentiometers	potentiometer.c	/^potentiometer_t potentiometers[NUM_OF_POTENTIOMETERS] = { $/;"	v
 prev	file.h	/^    struct _node_t *prev; $/;"	m	struct:_node_t	typeref:struct:_node_t::_node_t
+prev	map.h	/^    struct node_type * prev; $/;"	m	struct:node_type	typeref:struct:node_type::node_type
+print	map.c	/^void print(node_type * environ){$/;"	f
+printStringArray	shell.c	/^void printStringArray(char *stringArray[], int howmany){ $/;"	f
+print_boolean	shell.c	/^void print_boolean(boolean bool){ $/;"	f
 print_fdtable	io.c	/^void print_fdtable(){ $/;"	f
 printnode	mymalloc.c	/^void printnode(char *trav){ $/;"	f
+process_line	shell.c	/^int  process_line(char line[LINE_MAX + 1], int *argc, char * argv[]) {$/;"	f
 profont	profont.c	/^uint8_t profont[PROFONT_CHARS_IN_FONT][PROFONT_FONT_HEIGHT][PROFONT_FONT_WIDTH] = {$/;"	v
 pushbuttonInitAll	pushbuttondriver.c	/^void pushbuttonInitAll(void) {$/;"	f
 pushbuttonSW1Config	pushbuttondriver.c	/^void pushbuttonSW1Config(void) {$/;"	f
@@ -458,12 +529,13 @@ pushbutton_read	pushbutton.c	/^int pushbutton_read(void * minor_num){$/;"	f
 pushbutton_t	pushbutton.h	/^} pushbutton_t;$/;"	t	typeref:struct:_pushbutton_t
 pushbuttoninit	pushbuttondriver.c	/^void pushbuttoninit(void){ $/;"	f
 pushbuttons	pushbutton.c	/^pushbutton_t pushbuttons[NUM_OF_PUSHBUTTONS] = { $/;"	v
-r0	svc.c	/^		int r0;$/;"	m	union:frame::__anon10	file:
-r1	svc.c	/^		int r1;$/;"	m	union:frame::__anon11	file:
+put	map.c	/^node_type * put(node_type * node, key_type key, value_type value){$/;"	f
+r0	svc.c	/^		int r0;$/;"	m	union:frame::__anon12	file:
+r1	svc.c	/^		int r1;$/;"	m	union:frame::__anon13	file:
 r12	svc.c	/^	int r12;$/;"	m	struct:frame	file:
-r14	svc.c	/^		int r14;$/;"	m	union:frame::__anon14	file:
-r2	svc.c	/^		int r2;$/;"	m	union:frame::__anon12	file:
-r3	svc.c	/^		int r3;$/;"	m	union:frame::__anon13	file:
+r14	svc.c	/^		int r14;$/;"	m	union:frame::__anon16	file:
+r2	svc.c	/^		int r2;$/;"	m	union:frame::__anon14	file:
+r3	svc.c	/^		int r3;$/;"	m	union:frame::__anon15	file:
 read	capacitivepads.h	/^    int  (*read)(int); $/;"	m	struct:_capacitivepad_t
 read	io.c	/^    int (*read)(void * minor_num); $/;"	m	struct:device	file:
 read	potentiometer.h	/^    unsigned int (*read)(); $/;"	m	struct:_potentiometer_t
@@ -473,21 +545,27 @@ read	uart.h	/^    int (*read)(); $/;"	m	struct:_uart_t
 reinitalize_memory	mymalloc.c	/^void reinitalize_memory(){ $/;"	f
 release	io.c	/^    int (*release)(void * minor_num); $/;"	m	struct:device	file:
 returnAddr	svc.c	/^	int returnAddr;$/;"	m	struct:frame	file:
-returnVal	svc.c	/^		int returnVal;$/;"	m	union:frame::__anon10	file:
+returnVal	svc.c	/^		int returnVal;$/;"	m	union:frame::__anon12	file:
 sdramInit	sdram.c	/^void sdramInit(void) {$/;"	f
+second	shell.h	/^        unsigned second; $/;"	m	struct:_myclock_t::__anon11
+shellfree	shell.c	/^void shellfree(char *array[], unsigned howmany){ $/;"	f
 size	file.h	/^    unsigned size; $/;"	m	struct:_file_t
+size	map.h	/^    unsigned size; $/;"	m	struct:node_type
 size	mymalloc.h	/^    unsigned size; $/;"	m	struct:_mymalloc_t
 sizeofnode	mymalloc.c	/^unsigned sizeofnode(void * node){ $/;"	f
+splitString	shell.c	/^void splitString(char * string, char delimiter, $/;"	f
 start	mymalloc.c	/^static char * start; $/;"	v	file:
 stralloc	stringutils.c	/^char * stralloc(unsigned len){ $/;"	f
 strcompare	stringutils.c	/^unsigned strcompare(const char * s1, const char * s2){ $/;"	f
 strcopy	stringutils.c	/^char * strcopy(char * dst, const char * src){ $/;"	f
 strduplicate	stringutils.c	/^char * strduplicate(const char * src){ $/;"	f
 stream_t	io.h	/^} stream_t;$/;"	t	typeref:struct:_stream_t
+stringsplit	shell.c	/^void stringsplit(char line[LINE_MAX +1], const char * delimiter, $/;"	f
 strlength	stringutils.c	/^unsigned strlength(const char * string){ $/;"	f
 strlrtrim	stringutils.c	/^char * strlrtrim(const char * src){ $/;"	f
 strltrim	stringutils.c	/^char * strltrim(const char * src){ $/;"	f
 strrtrim	stringutils.c	/^char * strrtrim(const char * src){ $/;"	f
+subescapse_char	shell.c	/^char subescapse_char(char ch){ $/;"	f
 svcHandler	svc.c	/^__asm void svcHandler(void) {$/;"	f
 svcHandler	svc.c	/^void __attribute__((naked)) svcHandler(void) {$/;"	f
 svcHandlerInC	svc.c	/^void svcHandlerInC(struct frame *framePtr) {$/;"	f
@@ -495,6 +573,9 @@ svcInit_SetSVCPriority	svc.c	/^void svcInit_SetSVCPriority(unsigned char priorit
 sw1In	pushbuttondriver.c	/^int sw1In(void) {$/;"	f
 sw2In	pushbuttondriver.c	/^int sw2In(void) {$/;"	f
 taken	mymalloc.c	/^void taken(char *node, unsigned size){ $/;"	f
+testfree	mymalloctesting.c	/^void testfree(){ $/;"	f
+teststringallocation	mymalloctesting.c	/^void teststringallocation(){ $/;"	f
+teststringandint	mymalloctesting.c	/^void teststringandint(){ $/;"	f
 thermistor_driver_init	thermistordriver.c	/^void thermistor_driver_init(void) {$/;"	f
 thermistor_driver_read	thermistordriver.c	/^unsigned int thermistor_driver_read() {$/;"	f
 thermistor_init	thermistor.c	/^int thermistor_init(void * minor_num){ $/;"	f
@@ -503,6 +584,10 @@ thermistor_read	thermistor.c	/^int thermistor_read(void *minor_num){ $/;"	f
 thermistor_t	thermistor.h	/^} thermistor_t;$/;"	t	typeref:struct:_thermistor_t
 thermistors	thermistor.c	/^thermistor_t thermistors[NUM_OF_THERMISTORS] = { $/;"	v
 threshold	capacitivepadsdriver.c	/^	uint16_t threshold;$/;"	m	struct:electrodeHW	file:
+timeofday	shell.c	/^void timeofday(myclock_t * clock, unsigned long seconds){ $/;"	f
+toLong	shell.c	/^long toLong(char * string, int base){ $/;"	f
+toString	shell.c	/^char * toString(int monthno){ $/;"	f
+toUnsignedLong	shell.c	/^long toUnsignedLong(char * string, int base){ $/;"	f
 true	common.h	/^typedef enum { false, true } boolean; $/;"	e	enum:__anon1
 uartGetchar	uartdriver.c	/^char uartGetchar(UART_MemMapPtr uartChannel) {$/;"	f
 uartGetcharPresent	uartdriver.c	/^int uartGetcharPresent(UART_MemMapPtr uartChannel) {$/;"	f
@@ -527,12 +612,17 @@ uintptr_t	io.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
 uintptr_t	led.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
 uintptr_t	potentiometer.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
 uintptr_t	pushbutton.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	shell.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
 uintptr_t	thermistor.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
 uintptr_t	uart.c	/^typedef unsigned long uintptr_t;$/;"	t	file:
+value	map.h	/^    value_type value; $/;"	m	struct:node_type
+value_type	map.h	/^typedef const char * value_type; $/;"	t
 verify	capacitivepadsdriver.c	/^int verify(void) {$/;"	f
 verify_file_operations	main.c	/^void verify_file_operations(){ $/;"	f
 verify_led	main.c	/^int verify_led(void) {$/;"	f
+verify_map	map.c	/^int verify_map() {$/;"	f
 verify_memory_allocation	mymalloc.c	/^void verify_memory_allocation() {$/;"	f
+verify_memory_allocation_mymemory_testing	mymalloctesting.c	/^void verify_memory_allocation_mymemory_testing(){ $/;"	f
 verify_pushbutton	main.c	/^int verify_pushbutton(void) {$/;"	f
 verify_uart_lcdc	main.c	/^void verify_uart_lcdc(){ $/;"	f
 width	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console

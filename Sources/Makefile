@@ -28,7 +28,14 @@ profont: profont.o
 
 svc: svc.o
 
+mymalloctesting: mymalloctesting.o
+
+map: map.o
+
 main: io.o uart.o lcdc.o stringutils.o common.o delay.o uartdriver.o lcdcdriver.o mymalloc.o lcdcConsole.o profont.o svc.o led.o leddriver.o pushbutton.o pushbuttondriver.o capacitivepads.o capacitivepadsdriver.o thermistor.o thermistordriver.o potentiometer.o potentiometerdriver.o 
+
+shell: io.o uart.o lcdc.o stringutils.o common.o delay.o uartdriver.o lcdcdriver.o mymalloc.o lcdcConsole.o profont.o svc.o led.o leddriver.o pushbutton.o pushbuttondriver.o capacitivepads.o capacitivepadsdriver.o thermistor.o thermistordriver.o potentiometer.o potentiometerdriver.o mymalloctesting.o map.o
+
 
 run: main
 	./main
