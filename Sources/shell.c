@@ -19,7 +19,9 @@
 #include "stdio.h"
 #include "uart.h"
 #define CHAR_EOF 4
-extern void svcHandler(void);
+
+extern unsigned mystdout; 
+extern unsigned mystdin; 
 
 #include "uartdriver.h"
 #define CHAR_EOF 4
@@ -90,12 +92,18 @@ static node_type * env = NULL;
 void initialize_hardware(){ 
     mcgInit();
     sdramInit();
+    init_devices_fdtable(); 
+    mystdin = SVCMyopen("/dev/uart/1", 0); 
+    mystdout = SVCMyopen("/dev/lcdc/1", 0); 
+
+    /*mcgInit();
+    sdramInit();
     SVCUartInit(0); 
     SVCLcdcInit(0);
     initmemory(); 
     init_fdtable(); 
     mystdin = SVCMyopen("/dev/uart/1", 0); 
-    mystdout = SVCMyopen("/dev/lcdc/1", 0); 
+    mystdout = SVCMyopen("/dev/lcdc/1", 0); */
 }
 
 /*
@@ -126,17 +134,15 @@ int main() {
     write_string("Ready to accept user commands", mystdout);
     while(1){ 
         write_string("$ ", mystdout); 
-        //fflush(mystdout); 
-        //c = myread(mystdin);
-        c = uartGetchar(UART2_BASE_PTR); 
+        c = SVCFgetc(mystdin);
         while (c > 0 && c != '\n' && index < LINE_MAX) {
             if (isSlash(c)) { 
-                c = myread(mystdin); 
+                c = SVCFgetc(mystdin); 
                 c = subescapse_char(c); 
             }
             double_quote_check(&c); 
             line[index++] = c;
-            c = myread(mystdin);
+            c = SVCFgetc(mystdin);
         }
         myassert(!inside_double_quote, "", "!inside_double_quote"); 
         line[index] = '\0';
@@ -153,7 +159,7 @@ int main() {
             index = 0; 
         }*/
     }
-    myfree(argv); 
+    SVCFree(argv); 
     exit(EXIT_SUCCESS); 
 }
 
@@ -167,7 +173,7 @@ void shellfree(char *array[], unsigned howmany){
     myassert((int) howmany > 0, "", "(int) howmany > 0"); 
     unsigned i = 0; 
     for (i = 0; i < howmany; ++i) {
-        myfree(array[i]); 
+        SVCFree(array[i]); 
     }
     return; 
 }
@@ -175,7 +181,7 @@ void shellfree(char *array[], unsigned howmany){
 
 //not an ideal implementation, but gets the job done
 char *join(char * stringArray[], const char * delimiter){ 
-    char * result = (char *) mymalloc(MAX_STRING_LARGE_SIZE); 
+    char * result = (char *) SVCMalloc(MAX_STRING_LARGE_SIZE); 
     char * base = result; 
     int i;
     memoryset(result, '\0', MAX_STRING_LARGE_SIZE); 
@@ -223,13 +229,14 @@ calendar(days, seconds, useconds);
 return 0; 
 }*/
 
+
 int cmd_malloc(int argc, char *argv[]){
     void * addr;
     unsigned val; 
     char print_string[1000]; 
     myassert(argc == 2, "", "argc == 2"); 
     val = strtoul(argv[1], NULL, 10);
-    addr = (void *) mymalloc(val); 
+    addr = (void *) SVCMalloc(val); 
     if (addr) { 
         sprintf(print_string, "%p\n", addr);
         write_string(print_string, mystdout); 
@@ -239,7 +246,7 @@ int cmd_malloc(int argc, char *argv[]){
         write_string(print_string, mystdout); 
         return 127; 
     }
-    //myfree(addr); 
+    //SVCFree(addr); 
 }
 
 
@@ -247,7 +254,7 @@ int cmd_free(int argc, char *argv[]){
     unsigned long val; 
     myassert(argc == 2, "", "argc == 2"); 
     val = strtoul(argv[1], NULL, 16);
-    myfree((void *) (uintptr_t) val); 
+    SVCFree((void *) (uintptr_t) val); 
     return 0; 
 }
 
@@ -378,7 +385,7 @@ int  process_line(char line[LINE_MAX + 1], int *argc, char * argv[]) {
     }
     int i;
     for (i = 0; i < *argc; ++i) {
-        myfree(argv[i]);
+        SVCFree(argv[i]);
     }
     return result;
 }
@@ -545,7 +552,7 @@ void double_quote_check(int *ch){
 char *  clobberspaces(char * src, char delimiter){ 
     int i =0, j =0;  
     myassert(src != NULL, "", "src != NULL"); 
-    char * dst = (char *) mymalloc(strlength(src) + 1); 
+    char * dst = (char *) SVCMalloc(strlength(src) + 1); 
     //memoryset(dst, '\0', strlength(src)); 
     while(src[i]){ 
         if (!(src[i] == delimiter && src[i+1] == delimiter ))
@@ -583,7 +590,7 @@ void splitString(char * string, char delimiter,
     }
 
     //allocate space for argcount number of arguments
-    *store = (char **) mymalloc((argcount+1) * sizeof(char *)); 
+    *store = (char **) SVCMalloc((argcount+1) * sizeof(char *)); 
     (*store)[argcount] = NULL; 
 
     //create argv now
@@ -611,8 +618,8 @@ void splitString(char * string, char delimiter,
         (*howmany)++; 
         (*store)[argc] = NULL; 
     }
-    myfree(clbrstring); 
-    myfree(string); 
+    SVCFree(clbrstring); 
+    SVCFree(string); 
 }
 
 

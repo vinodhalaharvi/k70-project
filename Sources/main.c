@@ -156,10 +156,10 @@ void verify_file_operations(){
     write_string(print_string, mystdout); 
 }
 
-
+/* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
+ * (peripheral) clock is set to 60 MHz.*/
+/*
 int main(void) {
-    /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
-     * (peripheral) clock is set to 60 MHz.*/
     mcgInit();
     sdramInit();
     init_devices_fdtable(); 
@@ -170,6 +170,6 @@ int main(void) {
     //verify_pushbutton(); 
     verify_file_operations(); 
     return 0;
-}
+} */
 
 
