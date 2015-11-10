@@ -9,6 +9,11 @@
 #include "common.h"
 #include "assert.h"
 #include "file.h"
+#include "led.h"
+#include "pushbutton.h"
+#include "potentiometer.h"
+#include "thermistor.h"
+#include "capacitivepads.h"
 
 typedef unsigned long uintptr_t; 
 
@@ -79,7 +84,6 @@ void init_fdtable(){
     init_devices_fdtable();
 }
 
-
 static struct device {
     int (*init)(void * minor_num); 
     int (*release)(void * minor_num); 
@@ -88,7 +92,14 @@ static struct device {
 } devices[MAX_DEVICES] = {
     {lcdc_init, NULL, lcdc_write, NULL}, 
     {uart_init, NULL, uart_write, uart_read}, 
+    {led_init, NULL, led_write, NULL}, 
+    {pushbutton_init, NULL, NULL, pushbutton_read}, 
+    {potentiometer_init, NULL, NULL, potentiometer_read}, 
+    {capacitivepad_init, NULL, NULL, capacitivepad_read}, 
+    {thermistor_init, NULL, NULL, thermistor_read}, 
+    {fileinit, filerelease, filewrite, fileread} 
 }; 
+
 
 //static map
 int isdevice(int major_num) { 
