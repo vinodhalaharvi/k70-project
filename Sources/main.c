@@ -122,10 +122,10 @@ void verify_file_operations(){
     if (!is_memory_initialized()){ 
         initmemory(); 
     }
-    fd = myopen(filename, FILE_CREATE); 
-    fd = myopen("/tmp/test1.txt", FILE_CREATE); 
-    fd = myopen("/tmp/test2.txt", FILE_CREATE); 
-    fd = myopen("/tmp/test3.txt", FILE_CREATE); 
+    fd = SVCMyopen(filename, FILE_CREATE); 
+    fd = SVCMyopen("/tmp/test1.txt", FILE_CREATE); 
+    fd = SVCMyopen("/tmp/test2.txt", FILE_CREATE); 
+    fd = SVCMyopen("/tmp/test3.txt", FILE_CREATE); 
     i = 0; 
     const char * string = "hello world!"; 
     char print_string[1000];
@@ -134,20 +134,20 @@ void verify_file_operations(){
     		string, filename); 
     write_string(print_string, mystdout); 
     do {
-        mywrite(fd, string[i]); 
+        SVCFputc(fd, string[i]); 
     } while(string[i++]);
 
     sprintf(print_string, "Reading from file %s\r\n", filename);
     write_string(print_string, mystdout); 
     while((ch = myread(fd)) != EOF){ 
-        mywrite(mystdout, ch); 
+        SVCFputc(mystdout, ch); 
     }
 
     sprintf(print_string, "\r\n%s\r\n", "Files before ..");
     write_string(print_string, mystdout); 
 
     ls(); 
-    delete_file(filename); 
+    SVCDelete(filename); 
     sprintf(print_string, "Files after deleting file %s:\r\n", filename);
     write_string(print_string, mystdout); 
 
@@ -163,8 +163,8 @@ int main(void) {
     mcgInit();
     sdramInit();
     init_devices_fdtable(); 
-    mystdin = myopen("/dev/uart/1", 0); 
-    mystdout = myopen("/dev/lcdc/1", 0); 
+    mystdin = SVCMyopen("/dev/uart/1", 0); 
+    mystdout = SVCMyopen("/dev/lcdc/1", 0); 
     //verify_uart_lcdc(); 
     //verify_led(); 
     //verify_pushbutton(); 

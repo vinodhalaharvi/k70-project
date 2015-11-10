@@ -203,13 +203,13 @@ int __attribute__((never_inline)) SVCFClose(int fd) {
 #ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wreturn-type"
-int __attribute__((naked)) __attribute__((noinline)) SVCCreate(char * arg0) {
+int __attribute__((naked)) __attribute__((noinline)) SVCCreate(const char * arg0) {
 	__asm("svc %0" : : "I" (SVC_FILE_CREATE));
 	__asm("bx lr");
 }
 #pragma GCC diagnostic pop
 #else
-int __attribute__((never_inline)) SVCCreate(char * arg0) {
+int __attribute__((never_inline)) SVCCreate(const char * arg0) {
 	__asm("svc %0" : : "I" (SVC_FILE_CREATE));
 }
 #endif
@@ -218,13 +218,13 @@ int __attribute__((never_inline)) SVCCreate(char * arg0) {
 #ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wreturn-type"
-int __attribute__((naked)) __attribute__((noinline)) SVCDelete(char * filepath) {
+int __attribute__((naked)) __attribute__((noinline)) SVCDelete(const char * filepath) {
 	__asm("svc %0" : : "I" (SVC_FILE_DELETE));
 	__asm("bx lr");
 }
 #pragma GCC diagnostic pop
 #else
-int __attribute__((never_inline)) SVCDelete(char *filepath) {
+int __attribute__((never_inline)) SVCDelete(const char *filepath) {
 	__asm("svc %0" : : "I" (SVC_FILE_DELETE));
 }
 #endif
@@ -584,17 +584,17 @@ void svcHandlerInC(struct frame *framePtr) {
         framePtr->returnVal = myread(fd); 
         break; 
     case SVC_MYWRITE: 
-        ch = framePtr->arg0; 
-        fd = (unsigned) framePtr->arg1;
-        framePtr->returnVal = mywrite(ch, fd); 
+        fd = framePtr->arg0; 
+        ch = (unsigned) framePtr->arg1;
+        framePtr->returnVal = mywrite(fd, ch); 
         break; 
-    /*case SVC_FILE_CREATE: 
+    case SVC_FILE_CREATE: 
         filepath = (char * ) framePtr->arg0; 
         create_file(filepath); 
         break; 
     case SVC_FILE_DELETE: 
         filepath = (char * ) framePtr->arg0; 
         delete_file(filepath); 
-        break; */
+        break;
 	}
 }

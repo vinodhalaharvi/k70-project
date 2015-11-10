@@ -1,0 +1,546 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADC_CFG1_MODE_10_11_BIT	Sources/potentiometerdriver.h	14;"	d
+ADC_CFG1_MODE_10_11_BIT	Sources/thermistordriver.h	13;"	d
+ADC_CFG1_MODE_12_13_BIT	Sources/potentiometerdriver.h	13;"	d
+ADC_CFG1_MODE_12_13_BIT	Sources/thermistordriver.h	12;"	d
+ADC_CFG1_MODE_16_BIT	Sources/potentiometerdriver.h	15;"	d
+ADC_CFG1_MODE_16_BIT	Sources/thermistordriver.h	14;"	d
+ADC_CFG1_MODE_8_9_BIT	Sources/potentiometerdriver.h	12;"	d
+ADC_CFG1_MODE_8_9_BIT	Sources/thermistordriver.h	11;"	d
+ADC_CHANNEL_POTENTIOMETER	Sources/potentiometerdriver.h	9;"	d
+ADC_CHANNEL_TEMPERATURE_SENSOR	Sources/potentiometerdriver.h	10;"	d
+ADC_CHANNEL_TEMPERATURE_SENSOR	Sources/thermistordriver.h	9;"	d
+ADC_CHANNEL_THERMISTOR	Sources/thermistordriver.h	8;"	d
+ADC_SC3_AVGS_32_SAMPLES	Sources/potentiometerdriver.h	16;"	d
+ADC_SC3_AVGS_32_SAMPLES	Sources/thermistordriver.h	15;"	d
+ALIGN_SIZE	Sources/mymalloc.c	12;"	d	file:
+BLKSIZE	Sources/file.h	3;"	d
+CAPACITIVEPAD	Sources/io.h	/^    CAPACITIVEPAD,$/;"	e	enum:__anon4
+CAPACITIVEPAD1	Sources/io.h	/^    CAPACITIVEPAD1,$/;"	e	enum:__anon5
+CAPACITIVEPAD2	Sources/io.h	/^    CAPACITIVEPAD2,$/;"	e	enum:__anon5
+CAPACITIVEPAD3	Sources/io.h	/^    CAPACITIVEPAD3,$/;"	e	enum:__anon5
+CAPACITIVEPAD4	Sources/io.h	/^    CAPACITIVEPAD4 $/;"	e	enum:__anon5
+CHAR_EOF	Sources/main.c	41;"	d	file:
+DDR_CR00_DDRCLS_DDR	Sources/sdram.h	36;"	d
+DDR_CR00_DDRCLS_DDR2	Sources/sdram.h	38;"	d
+DDR_CR00_DDRCLS_LPDDR	Sources/sdram.h	37;"	d
+DDR_CR09_BSTLEN_2_WORDS	Sources/sdram.h	40;"	d
+DDR_CR09_BSTLEN_4_WORDS	Sources/sdram.h	41;"	d
+DDR_CR09_BSTLEN_8_WORDS	Sources/sdram.h	42;"	d
+DDR_CR30_INTSTAT_ANY_MASK	Sources/sdram.h	61;"	d
+DDR_CR30_INTSTAT_ANY_SHIFT	Sources/sdram.h	60;"	d
+DDR_CR30_INTSTAT_CAS_3_ERROR_MASK	Sources/sdram.h	53;"	d
+DDR_CR30_INTSTAT_CAS_3_ERROR_SHIFT	Sources/sdram.h	52;"	d
+DDR_CR30_INTSTAT_DDR2_AND_MOBILE_EN_MASK	Sources/sdram.h	51;"	d
+DDR_CR30_INTSTAT_DDR2_AND_MOBILE_EN_SHIFT	Sources/sdram.h	50;"	d
+DDR_CR30_INTSTAT_DFI_INT_COMPLETE_CHANGE_MASK	Sources/sdram.h	57;"	d
+DDR_CR30_INTSTAT_DFI_INT_COMPLETE_CHANGE_SHIFT	Sources/sdram.h	56;"	d
+DDR_CR30_INTSTAT_DLL_RESYNC_FINISH_MASK	Sources/sdram.h	59;"	d
+DDR_CR30_INTSTAT_DLL_RESYNC_FINISH_SHIFT	Sources/sdram.h	58;"	d
+DDR_CR30_INTSTAT_DRAM_INIT_COMPLETE_MASK	Sources/sdram.h	49;"	d
+DDR_CR30_INTSTAT_DRAM_INIT_COMPLETE_SHIFT	Sources/sdram.h	48;"	d
+DDR_CR30_INTSTAT_MULTIPLE_OUTSIDE_MASK	Sources/sdram.h	47;"	d
+DDR_CR30_INTSTAT_MULTIPLE_OUTSIDE_SHIFT	Sources/sdram.h	46;"	d
+DDR_CR30_INTSTAT_SINGLE_OUTSIDE_MASK	Sources/sdram.h	45;"	d
+DDR_CR30_INTSTAT_SINGLE_OUTSIDE_SHIFT	Sources/sdram.h	44;"	d
+DDR_CR30_INTSTAT_WRITE_FINISH_MASK	Sources/sdram.h	55;"	d
+DDR_CR30_INTSTAT_WRITE_FINISH_SHIFT	Sources/sdram.h	54;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_150_OHMS	Sources/sdram.h	28;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_50_OHMS	Sources/sdram.h	29;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_75_OHMS	Sources/sdram.h	27;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_ODT_DISABLED	Sources/sdram.h	26;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_10_BUFFERS	Sources/sdram.h	34;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_4_BUFFERS	Sources/sdram.h	32;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_7_BUFFERS	Sources/sdram.h	33;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_NO_BUFFER	Sources/sdram.h	31;"	d
+DOUBLELINKEDLIST_H	Sources/file.h	2;"	d
+ELECTRODE_COUNT	Sources/capacitivepadsdriver.c	22;"	d	file:
+Electrode_E1_EN_MASK	Sources/capacitivepadsdriver.c	72;"	d	file:
+Electrode_E2_EN_MASK	Sources/capacitivepadsdriver.c	74;"	d	file:
+Electrode_E3_EN_MASK	Sources/capacitivepadsdriver.c	76;"	d	file:
+Electrode_E4_EN_MASK	Sources/capacitivepadsdriver.c	78;"	d	file:
+FALSE	Sources/potentiometerdriver.h	6;"	d
+FALSE	Sources/thermistordriver.h	5;"	d
+FILE_APPEND	Sources/file.h	7;"	d
+FILE_CREATE	Sources/file.h	6;"	d
+FILE_READONLY	Sources/file.h	4;"	d
+FILE_READWRITE	Sources/file.h	5;"	d
+IO_H	Sources/io.h	2;"	d
+LCDC	Sources/io.h	/^    LCDC,$/;"	e	enum:__anon4
+LCDC1	Sources/io.h	/^typedef enum {LCDC1} lcdc_minor_device; $/;"	e	enum:__anon2
+LCDCCONSOLE_TAB_STOP_SPACING	Sources/lcdcConsole.h	19;"	d
+LCDC_ALT2	Sources/lcdcdriver.h	61;"	d
+LCDC_ALT5	Sources/lcdcdriver.h	62;"	d
+LCDC_ALT7	Sources/lcdcdriver.h	63;"	d
+LCDC_BLUE_MASK	Sources/lcdcdriver.h	33;"	d
+LCDC_BLUE_SHIFT	Sources/lcdcdriver.h	36;"	d
+LCDC_BYTES_PER_PIXEL	Sources/lcdcdriver.h	28;"	d
+LCDC_FRAME_BUFFER_SIZE	Sources/lcdcdriver.h	55;"	d
+LCDC_FRAME_START_ADDRESS	Sources/lcdcdriver.h	54;"	d
+LCDC_GREEN_MASK	Sources/lcdcdriver.h	32;"	d
+LCDC_GREEN_SHIFT	Sources/lcdcdriver.h	35;"	d
+LCDC_GW_BUFFER_SIZE	Sources/lcdcdriver.h	58;"	d
+LCDC_GW_START_ADDRESS	Sources/lcdcdriver.h	57;"	d
+LCDC_GW_XSIZE	Sources/lcdcdriver.h	24;"	d
+LCDC_GW_YSIZE	Sources/lcdcdriver.h	25;"	d
+LCDC_PIXEL_BLUE	Sources/lcdcdriver.h	42;"	d
+LCDC_PIXEL_GREEN	Sources/lcdcdriver.h	40;"	d
+LCDC_PIXEL_RED	Sources/lcdcdriver.h	38;"	d
+LCDC_RED_MASK	Sources/lcdcdriver.h	31;"	d
+LCDC_RED_SHIFT	Sources/lcdcdriver.h	34;"	d
+LCDC_SCREEN_BACKGROUND_COLOR	Sources/lcdcdriver.h	52;"	d
+LCDC_SCREEN_FOREGROUND_COLOR	Sources/lcdcdriver.h	50;"	d
+LCDC_SCREEN_XSIZE	Sources/lcdcdriver.h	20;"	d
+LCDC_SCREEN_YSIZE	Sources/lcdcdriver.h	21;"	d
+LED	Sources/io.h	/^    LED,$/;"	e	enum:__anon4
+LED_BLUE	Sources/io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	e	enum:__anon6
+LED_BLUE_PORTA_BIT	Sources/led.h	8;"	d
+LED_BLUE_PORTA_BIT	Sources/leddriver.h	18;"	d
+LED_GREEN	Sources/io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	e	enum:__anon6
+LED_GREEN_PORTA_BIT	Sources/led.h	7;"	d
+LED_GREEN_PORTA_BIT	Sources/leddriver.h	17;"	d
+LED_ORANGE	Sources/io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	e	enum:__anon6
+LED_ORANGE_PORTA_BIT	Sources/led.h	5;"	d
+LED_ORANGE_PORTA_BIT	Sources/leddriver.h	15;"	d
+LED_YELLOW	Sources/io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	e	enum:__anon6
+LED_YELLOW_PORTA_BIT	Sources/led.h	6;"	d
+LED_YELLOW_PORTA_BIT	Sources/leddriver.h	16;"	d
+MAX_DEVICES	Sources/io.h	3;"	d
+MAX_FILE_DESCRIPTORS	Sources/io.h	4;"	d
+MAX_FS_ENTRIES	Sources/file.c	11;"	d	file:
+MCM_CR_DDRSIZE_128_MBYTES	Sources/sdram.h	22;"	d
+MCM_CR_DDRSIZE_256_MBYTES	Sources/sdram.h	23;"	d
+MCM_CR_DDRSIZE_512_MBYTES	Sources/sdram.h	24;"	d
+MCM_CR_DDRSIZE_ADDRESS_TRANSLATION_DISABLED	Sources/sdram.h	21;"	d
+MEMORY_DATA_PADDING	Sources/mymalloc.c	11;"	d	file:
+MEMORY_SIZE	Sources/mymalloc.h	3;"	d
+MYMALLOC_H	Sources/mymalloc.h	2;"	d
+NUM_OF_CAPACITIVEPADS	Sources/capacitivepads.h	5;"	d
+NUM_OF_LCDCS	Sources/lcdc.h	4;"	d
+NUM_OF_LEDS	Sources/led.h	3;"	d
+NUM_OF_POTENTIOMETERS	Sources/potentiometer.h	5;"	d
+NUM_OF_PUSHBUTTONS	Sources/pushbutton.h	3;"	d
+NUM_OF_THERMISTORS	Sources/thermistor.h	5;"	d
+NUM_OF_UARTS	Sources/uart.h	4;"	d
+PORT_PCR_MUX_ANALOG	Sources/capacitivepadsdriver.c	19;"	d	file:
+PORT_PCR_MUX_ANALOG	Sources/led.h	11;"	d
+PORT_PCR_MUX_ANALOG	Sources/leddriver.h	21;"	d
+PORT_PCR_MUX_ANALOG	Sources/pushbuttondriver.h	19;"	d
+PORT_PCR_MUX_GPIO	Sources/capacitivepadsdriver.c	20;"	d	file:
+PORT_PCR_MUX_GPIO	Sources/led.h	14;"	d
+PORT_PCR_MUX_GPIO	Sources/leddriver.h	24;"	d
+PORT_PCR_MUX_GPIO	Sources/pushbuttondriver.h	22;"	d
+POTENTIOMETER	Sources/io.h	/^    POTENTIOMETER,$/;"	e	enum:__anon4
+POTENTIOMETER1	Sources/io.h	/^typedef enum { POTENTIOMETER1} potentiometer_minor_device;$/;"	e	enum:__anon8
+PREDEFINED_DEVICE_MAP	Sources/io.h	5;"	d
+PROFONT_CHARS_IN_FONT	Sources/profont.h	15;"	d
+PROFONT_FONT_HEIGHT	Sources/profont.h	16;"	d
+PROFONT_FONT_WIDTH	Sources/profont.h	17;"	d
+PUSHBUTTON	Sources/io.h	/^    PUSHBUTTON,$/;"	e	enum:__anon4
+PUSHBUTTON_SW1	Sources/io.h	/^typedef enum { PUSHBUTTON_SW1, PUSHBUTTON_SW2 } pushbutton_minor_device;$/;"	e	enum:__anon7
+PUSHBUTTON_SW1_PORTD_BIT	Sources/pushbuttondriver.h	15;"	d
+PUSHBUTTON_SW2	Sources/io.h	/^typedef enum { PUSHBUTTON_SW1, PUSHBUTTON_SW2 } pushbutton_minor_device;$/;"	e	enum:__anon7
+PUSHBUTTON_SW2_PORTE_BIT	Sources/pushbuttondriver.h	16;"	d
+REVE	Sources/lcdcdriver.h	17;"	d
+SDRAM_END	Sources/sdram.h	70;"	d
+SDRAM_SIZE	Sources/sdram.h	64;"	d
+SDRAM_START	Sources/sdram.h	67;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_1	Sources/mcg.h	18;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_10	Sources/mcg.h	27;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_11	Sources/mcg.h	28;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_12	Sources/mcg.h	29;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_13	Sources/mcg.h	30;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_14	Sources/mcg.h	31;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_15	Sources/mcg.h	32;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_16	Sources/mcg.h	33;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_2	Sources/mcg.h	19;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_3	Sources/mcg.h	20;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_4	Sources/mcg.h	21;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_5	Sources/mcg.h	22;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_6	Sources/mcg.h	23;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_7	Sources/mcg.h	24;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_8	Sources/mcg.h	25;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_9	Sources/mcg.h	26;"	d
+SIM_MCR_DDRCFG_DDR1	Sources/sdram.h	18;"	d
+SIM_MCR_DDRCFG_DDR2_FULL_STRENGTH	Sources/sdram.h	19;"	d
+SIM_MCR_DDRCFG_DDR2_HALF_STRENGTH	Sources/sdram.h	17;"	d
+SIM_MCR_DDRCFG_LPDDR_FULL_STRENGTH	Sources/sdram.h	16;"	d
+SIM_MCR_DDRCFG_LPDDR_HALF_STRENGTH	Sources/sdram.h	15;"	d
+SVCCapacitivePadInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCCapacitivePadInit(int arg0) {$/;"	f
+SVCCapacitivePadInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCCapacitivePadInit(int arg0) {$/;"	f
+SVCCapacitivePadRead	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCCapacitivePadRead(int arg0) {$/;"	f
+SVCCapacitivePadRead	Sources/svc.c	/^int __attribute__((never_inline)) SVCCapacitivePadRead(int arg0) {$/;"	f
+SVCCreate	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCCreate(const char * arg0) {$/;"	f
+SVCCreate	Sources/svc.c	/^int __attribute__((never_inline)) SVCCreate(const char * arg0) {$/;"	f
+SVCDelete	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCDelete(const char * filepath) {$/;"	f
+SVCDelete	Sources/svc.c	/^int __attribute__((never_inline)) SVCDelete(const char *filepath) {$/;"	f
+SVCFClose	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCFClose(int fd) {$/;"	f
+SVCFClose	Sources/svc.c	/^int __attribute__((never_inline)) SVCFClose(int fd) {$/;"	f
+SVCFgetc	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCFgetc(int fd) {$/;"	f
+SVCFgetc	Sources/svc.c	/^int __attribute__((never_inline)) SVCFgetc(int fd) {$/;"	f
+SVCFputc	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCFputc(int ch, int fd) {$/;"	f
+SVCFputc	Sources/svc.c	/^int __attribute__((never_inline)) SVCFputc(int ch, int fd) {$/;"	f
+SVCFree	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCFree(void * arg0) {$/;"	f
+SVCFree	Sources/svc.c	/^void __attribute__((never_inline)) SVCFree(void * arg0) {$/;"	f
+SVCLcdcInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCLcdcInit(int arg0) {$/;"	f
+SVCLcdcInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCLcdcInit(int arg0) {$/;"	f
+SVCLcdcWrite	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCLcdcWrite(int arg0, int arg1) {$/;"	f
+SVCLcdcWrite	Sources/svc.c	/^void __attribute__((never_inline)) SVCLcdcWrite(int arg0, int arg1) {$/;"	f
+SVCLedInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCLedInit(int arg0) {$/;"	f
+SVCLedInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCLedInit(int arg0) {$/;"	f
+SVCLedWrite	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCLedWrite(int arg0, int arg1) {$/;"	f
+SVCLedWrite	Sources/svc.c	/^void __attribute__((never_inline)) SVCLedWrite(int arg0, int arg1) {$/;"	f
+SVCMalloc	Sources/svc.c	/^void * __attribute__((naked)) __attribute__((noinline)) SVCMalloc(unsigned arg0) {$/;"	f
+SVCMalloc	Sources/svc.c	/^void * __attribute__((never_inline)) SVCMalloc(unsigned arg0) {$/;"	f
+SVCMyopen	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCMyopen($/;"	f
+SVCMyopen	Sources/svc.c	/^int __attribute__((never_inline)) SVCMyopen($/;"	f
+SVCPotentiometerInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCPotentiometerInit(int arg0) {$/;"	f
+SVCPotentiometerInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCPotentiometerInit(int arg0) {$/;"	f
+SVCPotentiometerRead	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCPotentiometerRead(int arg0) {$/;"	f
+SVCPotentiometerRead	Sources/svc.c	/^int __attribute__((never_inline)) SVCPotentiometerRead(int arg0) {$/;"	f
+SVCPushButtonInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCPushButtonInit(int arg0) {$/;"	f
+SVCPushButtonInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCPushButtonInit(int arg0) {$/;"	f
+SVCPushButtonRead	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCPushButtonRead(int arg0) {$/;"	f
+SVCPushButtonRead	Sources/svc.c	/^int __attribute__((never_inline)) SVCPushButtonRead(int arg0) {$/;"	f
+SVCUartInit	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCUartInit(int arg0) {$/;"	f
+SVCUartInit	Sources/svc.c	/^void __attribute__((never_inline)) SVCUartInit(int arg0) {$/;"	f
+SVCUartRead	Sources/svc.c	/^int __attribute__((naked)) __attribute__((noinline)) SVCUartRead(int arg0) {$/;"	f
+SVCUartRead	Sources/svc.c	/^int __attribute__((never_inline)) SVCUartRead(int arg0) {$/;"	f
+SVCUartWrite	Sources/svc.c	/^void __attribute__((naked)) __attribute__((noinline)) SVCUartWrite(int arg0, int arg1) {$/;"	f
+SVCUartWrite	Sources/svc.c	/^void __attribute__((never_inline)) SVCUartWrite(int arg0, int arg1) {$/;"	f
+SVC_CAPACITIVEPAD_INIT	Sources/svc.h	37;"	d
+SVC_CAPACITIVEPAD_READ	Sources/svc.h	38;"	d
+SVC_FILE_CREATE	Sources/svc.h	45;"	d
+SVC_FILE_DELETE	Sources/svc.h	46;"	d
+SVC_FREE	Sources/svc.h	40;"	d
+SVC_LCDC_INIT	Sources/svc.h	29;"	d
+SVC_LCDC_WRITE	Sources/svc.h	30;"	d
+SVC_LED_INIT	Sources/svc.h	19;"	d
+SVC_LED_WRITE	Sources/svc.h	20;"	d
+SVC_MALLOC	Sources/svc.h	39;"	d
+SVC_MYCLOSE	Sources/svc.h	42;"	d
+SVC_MYOPEN	Sources/svc.h	41;"	d
+SVC_MYREAD	Sources/svc.h	43;"	d
+SVC_MYWRITE	Sources/svc.h	44;"	d
+SVC_MaxPriority	Sources/svc.h	15;"	d
+SVC_POTENTIOMETER_INIT	Sources/svc.h	32;"	d
+SVC_POTENTIOMETER_READ	Sources/svc.h	33;"	d
+SVC_PUSHBUTTON_INIT	Sources/svc.h	22;"	d
+SVC_PUSHBUTTON_READ	Sources/svc.h	23;"	d
+SVC_PriorityShift	Sources/svc.h	16;"	d
+SVC_THERMISTOR_INIT	Sources/svc.h	35;"	d
+SVC_THERMISTOR_READ	Sources/svc.h	36;"	d
+SVC_UART_INIT	Sources/svc.h	25;"	d
+SVC_UART_READ	Sources/svc.h	27;"	d
+SVC_UART_WRITE	Sources/svc.h	26;"	d
+THERMISTOR	Sources/io.h	/^    THERMISTOR,$/;"	e	enum:__anon4
+THERMISTOR1	Sources/io.h	/^typedef enum { THERMISTOR1} thermistor_minor_device; $/;"	e	enum:__anon9
+THRESHOLD_OFFSET	Sources/capacitivepadsdriver.c	23;"	d	file:
+TRUE	Sources/potentiometerdriver.h	7;"	d
+TRUE	Sources/thermistordriver.h	6;"	d
+TSI_Calibrate	Sources/capacitivepadsdriver.c	/^void TSI_Calibrate(void) {$/;"	f
+TSI_Init	Sources/capacitivepadsdriver.c	/^void TSI_Init(void) {$/;"	f
+UART	Sources/io.h	/^    UART,$/;"	e	enum:__anon4
+UART1	Sources/io.h	/^typedef enum {UART1} uart_minor_device; $/;"	e	enum:__anon3
+UART2_ERROR_INTERRUPT_PRIORITY	Sources/uartdriver.h	25;"	d
+UART2_ERROR_IRQ_NUMBER	Sources/uartdriver.h	23;"	d
+UART2_STATUS_INTERRUPT_PRIORITY	Sources/uartdriver.h	20;"	d
+UART2_STATUS_IRQ_NUMBER	Sources/uartdriver.h	18;"	d
+XPSR_FRAME_ALIGNED_BIT	Sources/svc.c	81;"	d	file:
+XPSR_FRAME_ALIGNED_MASK	Sources/svc.c	82;"	d	file:
+_CAPACITIVEPADDRIVER_H	Sources/capacitivepadsdriver.h	2;"	d
+_CAPACITIVEPAD_H	Sources/capacitivepads.h	4;"	d
+_COMMON_H	Sources/common.h	2;"	d
+_DELAY_H	Sources/delay.h	13;"	d
+_FILE	Sources/io.h	/^    _FILE $/;"	e	enum:__anon4
+_LCDCCONSOLE_H	Sources/lcdcConsole.h	13;"	d
+_LCDCDRIVER_H	Sources/lcdcdriver.h	13;"	d
+_LCDC_H	Sources/lcdc.h	3;"	d
+_LEDDRIVER_H	Sources/leddriver.h	13;"	d
+_LED_H	Sources/led.h	2;"	d
+_MCG_H	Sources/mcg.h	13;"	d
+_POTENTIAMETERDRIVER_H	Sources/potentiometerdriver.h	2;"	d
+_POTENTIOMETER_H	Sources/potentiometer.h	4;"	d
+_PROFONT_H	Sources/profont.h	13;"	d
+_PUSHBUTTONDRIVER_H	Sources/pushbuttondriver.h	13;"	d
+_PUSHBUTTON_H	Sources/pushbutton.h	2;"	d
+_SDRAM_H	Sources/sdram.h	13;"	d
+_SVC_H	Sources/svc.h	13;"	d
+_THERMISTORDRIVER_H	Sources/thermistordriver.h	2;"	d
+_THERMISTOR_H	Sources/thermistor.h	4;"	d
+_UARTDRIVER_H	Sources/uartdriver.h	13;"	d
+_UART_H	Sources/uart.h	3;"	d
+__STRINGUTILS_H	Sources/stringutils.h	3;"	d
+_capacitivepad_t	Sources/capacitivepads.h	/^typedef struct _capacitivepad_t {$/;"	s
+_fdtable_t	Sources/io.h	/^typedef struct _fdtable_t {$/;"	s
+_file_t	Sources/file.h	/^typedef struct _file_t {$/;"	s
+_filepath_to_device_t	Sources/io.h	/^typedef struct _filepath_to_device_t {$/;"	s
+_lcdcd_t	Sources/lcdc.h	/^typedef struct _lcdcd_t {$/;"	s
+_led_t	Sources/led.h	/^typedef struct _led_t {$/;"	s
+_mymalloc_t	Sources/mymalloc.h	/^typedef struct _mymalloc_t {$/;"	s
+_node_t	Sources/file.h	/^typedef struct _node_t {$/;"	s
+_potentiometer_t	Sources/potentiometer.h	/^typedef struct _potentiometer_t {$/;"	s
+_pushbutton_t	Sources/pushbutton.h	/^typedef struct _pushbutton_t {$/;"	s
+_stream_t	Sources/io.h	/^typedef struct _stream_t {$/;"	s
+_thermistor_t	Sources/thermistor.h	/^typedef struct _thermistor_t {$/;"	s
+_uart_t	Sources/uart.h	/^typedef struct _uart_t {$/;"	s
+align	Sources/mymalloc.c	/^unsigned align(unsigned value){ $/;"	f
+allocblock	Sources/file.c	/^void allocblock(node_t *node){ $/;"	f
+arg0	Sources/svc.c	/^		int arg0;$/;"	m	union:frame::__anon10	file:
+arg1	Sources/svc.c	/^		int arg1;$/;"	m	union:frame::__anon11	file:
+arg2	Sources/svc.c	/^		int arg2;$/;"	m	union:frame::__anon12	file:
+arg3	Sources/svc.c	/^		int arg3;$/;"	m	union:frame::__anon13	file:
+assert_memory_is_initialized	Sources/mymalloc.c	/^void assert_memory_is_initialized(){ $/;"	f
+boolean	Sources/common.h	/^typedef enum { false, true } boolean; $/;"	t	typeref:enum:__anon1
+calibrate	Sources/capacitivepads.h	/^    void (*calibrate)(void); $/;"	m	struct:_capacitivepad_t
+capacitivepad_calibrate	Sources/capacitivepads.c	/^void capacitivepad_calibrate(void *minor_num){ $/;"	f
+capacitivepad_init	Sources/capacitivepads.c	/^int capacitivepad_init(void * minor_num){ $/;"	f
+capacitivepad_minor_device	Sources/io.h	/^} capacitivepad_minor_device; $/;"	t	typeref:enum:__anon5
+capacitivepad_read	Sources/capacitivepads.c	/^int capacitivepad_read(void *minor_num){ $/;"	f
+capacitivepad_t	Sources/capacitivepads.h	/^} capacitivepad_t;$/;"	t	typeref:struct:_capacitivepad_t
+capacitivepads	Sources/capacitivepads.c	/^capacitivepad_t capacitivepads[NUM_OF_CAPACITIVEPADS] = { $/;"	v
+cat	Sources/io.c	/^void cat(unsigned fd){ $/;"	f
+channel	Sources/capacitivepadsdriver.c	/^	int channel;$/;"	m	struct:electrodeHW	file:
+close_fd	Sources/io.c	/^int close_fd(int fd){$/;"	f
+console	Sources/lcdcConsole.h	/^struct console {$/;"	s
+console	Sources/lcdcdriver.c	/^static struct console console; $/;"	v	typeref:struct:console	file:
+counterRegister	Sources/capacitivepadsdriver.c	/^	uint16_t *counterRegister;$/;"	m	struct:electrodeHW	file:
+create_fd	Sources/io.c	/^int create_fd(int major_num, int minor_num){ $/;"	f
+create_file	Sources/file.c	/^void create_file(const char * filename){$/;"	f
+data	Sources/file.h	/^    void * data; $/;"	m	struct:_node_t
+data	Sources/mymalloc.h	/^    char * data[0]; $/;"	m	struct:_mymalloc_t
+defragment_memory	Sources/mymalloc.c	/^void defragment_memory(unsigned iterations){ $/;"	f
+delay	Sources/delay.c	/^void delay(unsigned long int limit) {$/;"	f
+delete_file	Sources/file.c	/^void delete_file(const char * filename){$/;"	f
+device	Sources/io.c	/^static struct device {$/;"	s	file:
+devices	Sources/io.c	/^} devices[MAX_DEVICES] = {$/;"	v	typeref:struct:device	file:
+electrodeHW	Sources/capacitivepadsdriver.c	/^struct electrodeHW {$/;"	s	file:
+electrodeHW	Sources/capacitivepadsdriver.c	/^} electrodeHW[ELECTRODE_COUNT] =$/;"	v	typeref:struct:electrodeHW
+electrode_in	Sources/capacitivepadsdriver.c	/^int electrode_in(int electrodeNumber) {$/;"	f
+false	Sources/common.h	/^typedef enum { false, true } boolean; $/;"	e	enum:__anon1
+fdtable	Sources/io.c	/^static fdtable_t fdtable[MAX_FILE_DESCRIPTORS]; $/;"	v	file:
+fdtable_t	Sources/io.h	/^} fdtable_t;$/;"	t	typeref:struct:_fdtable_t
+file_properties	Sources/io.c	/^static filepath_to_device_t file_properties[PREDEFINED_DEVICE_MAP] = { $/;"	v	file:
+file_t	Sources/file.h	/^} file_t;$/;"	t	typeref:struct:_file_t
+fileinit	Sources/file.c	/^int fileinit(void * minor_num) { $/;"	f
+filename	Sources/file.h	/^    char * filename; $/;"	m	struct:_file_t
+filepath	Sources/io.h	/^    const char * filepath; $/;"	m	struct:_filepath_to_device_t
+filepath_to_device_t	Sources/io.h	/^} filepath_to_device_t;$/;"	t	typeref:struct:_filepath_to_device_t
+fileread	Sources/file.c	/^int fileread(void *minor_num){$/;"	f
+filerelease	Sources/file.c	/^int filerelease(void * minor_num){ $/;"	f
+fileseek	Sources/file.c	/^void fileseek(void *minor_num, unsigned offset){$/;"	f
+filesystem	Sources/file.c	/^static  file_t * filesystem[MAX_FS_ENTRIES]; $/;"	v	file:
+filewrite	Sources/file.c	/^int filewrite(int ch, void * minor_num){$/;"	f
+frame	Sources/svc.c	/^struct frame {$/;"	s	file:
+framebuffer	Sources/lcdcConsole.h	/^  uint32_t *framebuffer;	\/\/ Starting address of frame buffer in memory$/;"	m	struct:console
+free	Sources/mymalloc.h	/^    unsigned free; $/;"	m	struct:_mymalloc_t
+free_file_memory	Sources/file.c	/^void free_file_memory(node_t * node){$/;"	f
+get_device_path	Sources/io.c	/^const char * get_device_path(unsigned major_num, unsigned minor_num){ $/;"	f
+get_fd	Sources/io.c	/^int get_fd(int major_num, int minor_num){ $/;"	f
+get_file_inode	Sources/file.c	/^int get_file_inode(const char * filepath){ $/;"	f
+get_major_num	Sources/io.c	/^int get_major_num(const char * filepath){ $/;"	f
+get_minor_num	Sources/io.c	/^int get_minor_num(const char * filepath){ $/;"	f
+getcurrentprocessid	Sources/mymalloc.c	/^int getcurrentprocessid(){ $/;"	f
+getfile	Sources/file.c	/^file_t * getfile(void * minor_num){ $/;"	f
+height	Sources/lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
+hole	Sources/mymalloc.c	/^int hole(char * trav){ $/;"	f
+init	Sources/capacitivepads.h	/^    void (*init)(void); $/;"	m	struct:_capacitivepad_t
+init	Sources/io.c	/^    int (*init)(void * minor_num); $/;"	m	struct:device	file:
+init	Sources/lcdc.h	/^    void (*init)(void); $/;"	m	struct:_lcdcd_t
+init	Sources/led.h	/^    void (*init)(void); $/;"	m	struct:_led_t
+init	Sources/potentiometer.h	/^    void (*init)(void); $/;"	m	struct:_potentiometer_t
+init	Sources/pushbutton.h	/^    void (*init)(void); $/;"	m	struct:_pushbutton_t
+init	Sources/thermistor.h	/^    void (*init)(void); $/;"	m	struct:_thermistor_t
+init	Sources/uart.h	/^    void (*init)(void); $/;"	m	struct:_uart_t
+init_devices_fdtable	Sources/io.c	/^void init_devices_fdtable(){ $/;"	f
+init_fdtable	Sources/io.c	/^void init_fdtable(){ $/;"	f
+initmemory	Sources/mymalloc.c	/^unsigned initmemory(){ $/;"	f
+initmemory_ram	Sources/mymalloc.c	/^unsigned initmemory_ram(){ $/;"	f
+initmemory_sdram	Sources/mymalloc.c	/^unsigned initmemory_sdram(){ $/;"	f
+input_present	Sources/uart.h	/^    int (*input_present)(void); $/;"	m	struct:_uart_t
+is_fd_inuse	Sources/io.c	/^int is_fd_inuse(int fd){ $/;"	f
+is_memory_initialized	Sources/mymalloc.c	/^unsigned is_memory_initialized(){ $/;"	f
+isdevice	Sources/io.c	/^int isdevice(int major_num) { $/;"	f
+isfile	Sources/io.c	/^int isfile(int major_num){ $/;"	f
+isfileexists	Sources/file.c	/^unsigned isfileexists(const char * filepath){ $/;"	f
+lcdcConsoleClear	Sources/lcdcConsole.c	/^void lcdcConsoleClear(struct console *console) {$/;"	f
+lcdcConsoleInit	Sources/lcdcConsole.c	/^void lcdcConsoleInit(struct console *console) {$/;"	f
+lcdcConsolePutc	Sources/lcdcConsole.c	/^void lcdcConsolePutc(struct console *console, int ch) {$/;"	f
+lcdcConsoleScroll	Sources/lcdcConsole.c	/^void lcdcConsoleScroll(struct console *console) {$/;"	f
+lcdcInit	Sources/lcdcdriver.c	/^void lcdcInit(void) {$/;"	f
+lcdcInitPins	Sources/lcdcdriver.c	/^void lcdcInitPins() {$/;"	f
+lcdcInitScreen	Sources/lcdcdriver.c	/^void lcdcInitScreen() {$/;"	f
+lcdc_driver_init	Sources/lcdcdriver.c	/^void lcdc_driver_init(void) {$/;"	f
+lcdc_driver_write	Sources/lcdcdriver.c	/^int lcdc_driver_write(int ch){ $/;"	f
+lcdc_init	Sources/lcdc.c	/^int lcdc_init(void * minor_num){ $/;"	f
+lcdc_minor_device	Sources/io.h	/^typedef enum {LCDC1} lcdc_minor_device; $/;"	t	typeref:enum:__anon2
+lcdc_t	Sources/lcdc.h	/^} lcdc_t;$/;"	t	typeref:struct:_lcdcd_t
+lcdc_write	Sources/lcdc.c	/^int lcdc_write(int ch, void *minor_num){ $/;"	f
+lcdcs	Sources/lcdc.c	/^lcdc_t lcdcs[NUM_OF_LCDCS] = { $/;"	v
+ledBlueConfig	Sources/leddriver.c	/^void ledBlueConfig(void) {$/;"	f
+ledBlueOff	Sources/leddriver.c	/^void ledBlueOff(void) {$/;"	f
+ledBlueOn	Sources/leddriver.c	/^void ledBlueOn(void) {$/;"	f
+ledBlueWrite	Sources/leddriver.c	/^void ledBlueWrite(int ch){$/;"	f
+ledGreenConfig	Sources/leddriver.c	/^void ledGreenConfig(void) {$/;"	f
+ledGreenOff	Sources/leddriver.c	/^void ledGreenOff(void) {$/;"	f
+ledGreenOn	Sources/leddriver.c	/^void ledGreenOn(void) {$/;"	f
+ledGreenWrite	Sources/leddriver.c	/^void ledGreenWrite(int ch){$/;"	f
+ledInit	Sources/leddriver.c	/^void ledInit(){ $/;"	f
+ledInitAll	Sources/leddriver.c	/^void ledInitAll(void) {$/;"	f
+ledOrangeConfig	Sources/leddriver.c	/^void ledOrangeConfig(void) {$/;"	f
+ledOrangeOff	Sources/leddriver.c	/^void ledOrangeOff(void) {$/;"	f
+ledOrangeOn	Sources/leddriver.c	/^void ledOrangeOn(void) {$/;"	f
+ledOrangeWrite	Sources/leddriver.c	/^void ledOrangeWrite(int ch){$/;"	f
+ledYellowConfig	Sources/leddriver.c	/^void ledYellowConfig(void) {$/;"	f
+ledYellowOff	Sources/leddriver.c	/^void ledYellowOff(void) {$/;"	f
+ledYellowOn	Sources/leddriver.c	/^void ledYellowOn(void) {$/;"	f
+ledYellowWrite	Sources/leddriver.c	/^void ledYellowWrite(int ch){$/;"	f
+led_init	Sources/led.c	/^int led_init(void * minor_num){ $/;"	f
+led_minor_device	Sources/io.h	/^typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  $/;"	t	typeref:enum:__anon6
+led_t	Sources/led.h	/^} led_t;$/;"	t	typeref:struct:_led_t
+led_write	Sources/led.c	/^int led_write(int ch, void *minor_num){ $/;"	f
+leds	Sources/led.c	/^led_t leds[NUM_OF_LEDS] = { $/;"	v
+lr	Sources/svc.c	/^		int lr;$/;"	m	union:frame::__anon14	file:
+ls	Sources/file.c	/^void ls(){$/;"	f
+main	Sources/main.c	/^int main(void) {$/;"	f
+major_device	Sources/io.h	/^} major_device; $/;"	t	typeref:enum:__anon4
+major_num	Sources/io.h	/^    int major_num; $/;"	m	struct:_fdtable_t
+major_num	Sources/io.h	/^    unsigned major_num; $/;"	m	struct:_filepath_to_device_t
+majorno	Sources/io.h	/^    int majorno; $/;"	m	struct:_stream_t
+mask	Sources/capacitivepadsdriver.c	/^	uint32_t mask;$/;"	m	struct:electrodeHW	file:
+mcgInit	Sources/mcg.c	/^void mcgInit(void) {$/;"	f
+memory_end	Sources/mymalloc.c	/^static char * memory_end; $/;"	v	file:
+memorymap	Sources/mymalloc.c	/^void memorymap(){ $/;"	f
+memoryset	Sources/stringutils.c	/^void memoryset(void *memory, char ch, unsigned len){ $/;"	f
+merge	Sources/mymalloc.c	/^void merge(char * trav){ $/;"	f
+minor_num	Sources/io.h	/^    int minor_num; $/;"	m	struct:_fdtable_t
+minor_num	Sources/io.h	/^    unsigned minor_num; $/;"	m	struct:_filepath_to_device_t
+minorno	Sources/io.h	/^    int minorno; $/;"	m	struct:_stream_t
+myassert	Sources/common.c	/^void myassert(unsigned status, $/;"	f
+myclose	Sources/io.c	/^int myclose(int fd){ $/;"	f
+myfree	Sources/mymalloc.c	/^void myfree(void *addr){ $/;"	f
+mymalloc	Sources/mymalloc.c	/^void * mymalloc(unsigned size){ $/;"	f
+mymalloc_t	Sources/mymalloc.h	/^} mymalloc_t;$/;"	t	typeref:struct:_mymalloc_t
+myopen	Sources/io.c	/^int myopen(const char * filepath, unsigned mode){ $/;"	f
+myread	Sources/io.c	/^int myread(int fd){ $/;"	f
+mystdin	Sources/common.c	/^unsigned mystdin; $/;"	v
+mystdout	Sources/common.c	/^unsigned mystdout; $/;"	v
+mywrite	Sources/io.c	/^int mywrite(int fd, int ch){ $/;"	f
+newfile	Sources/file.c	/^file_t * newfile(){ $/;"	f
+next	Sources/file.h	/^    struct _node_t *next; $/;"	m	struct:_node_t	typeref:struct:_node_t::_node_t
+next	Sources/mymalloc.c	/^char * next(char *trav){ $/;"	f
+node	Sources/file.h	/^    node_t *node; $/;"	m	struct:_file_t
+node_t	Sources/file.h	/^} node_t;$/;"	t	typeref:struct:_node_t
+offset	Sources/file.h	/^    unsigned offset;$/;"	m	struct:_file_t
+pid	Sources/mymalloc.h	/^    unsigned pid;$/;"	m	struct:_mymalloc_t
+potentiometer_driver_init	Sources/potentiometerdriver.c	/^void potentiometer_driver_init(void) {$/;"	f
+potentiometer_driver_read	Sources/potentiometerdriver.c	/^unsigned int potentiometer_driver_read() {$/;"	f
+potentiometer_init	Sources/potentiometer.c	/^int potentiometer_init(void * minor_num){ $/;"	f
+potentiometer_minor_device	Sources/io.h	/^typedef enum { POTENTIOMETER1} potentiometer_minor_device;$/;"	t	typeref:enum:__anon8
+potentiometer_read	Sources/potentiometer.c	/^int potentiometer_read(void *minor_num){ $/;"	f
+potentiometer_t	Sources/potentiometer.h	/^} potentiometer_t;$/;"	t	typeref:struct:_potentiometer_t
+potentiometers	Sources/potentiometer.c	/^potentiometer_t potentiometers[NUM_OF_POTENTIOMETERS] = { $/;"	v
+prev	Sources/file.h	/^    struct _node_t *prev; $/;"	m	struct:_node_t	typeref:struct:_node_t::_node_t
+print_fdtable	Sources/io.c	/^void print_fdtable(){ $/;"	f
+printnode	Sources/mymalloc.c	/^void printnode(char *trav){ $/;"	f
+profont	Sources/profont.c	/^uint8_t profont[PROFONT_CHARS_IN_FONT][PROFONT_FONT_HEIGHT][PROFONT_FONT_WIDTH] = {$/;"	v
+pushbuttonInitAll	Sources/pushbuttondriver.c	/^void pushbuttonInitAll(void) {$/;"	f
+pushbuttonSW1Config	Sources/pushbuttondriver.c	/^void pushbuttonSW1Config(void) {$/;"	f
+pushbuttonSW2Config	Sources/pushbuttondriver.c	/^void pushbuttonSW2Config(void) {$/;"	f
+pushbutton_init	Sources/pushbutton.c	/^int pushbutton_init(void * minor_num){$/;"	f
+pushbutton_minor_device	Sources/io.h	/^typedef enum { PUSHBUTTON_SW1, PUSHBUTTON_SW2 } pushbutton_minor_device;$/;"	t	typeref:enum:__anon7
+pushbutton_read	Sources/pushbutton.c	/^int pushbutton_read(void * minor_num){$/;"	f
+pushbutton_t	Sources/pushbutton.h	/^} pushbutton_t;$/;"	t	typeref:struct:_pushbutton_t
+pushbuttoninit	Sources/pushbuttondriver.c	/^void pushbuttoninit(void){ $/;"	f
+pushbuttons	Sources/pushbutton.c	/^pushbutton_t pushbuttons[NUM_OF_PUSHBUTTONS] = { $/;"	v
+r0	Sources/svc.c	/^		int r0;$/;"	m	union:frame::__anon10	file:
+r1	Sources/svc.c	/^		int r1;$/;"	m	union:frame::__anon11	file:
+r12	Sources/svc.c	/^	int r12;$/;"	m	struct:frame	file:
+r14	Sources/svc.c	/^		int r14;$/;"	m	union:frame::__anon14	file:
+r2	Sources/svc.c	/^		int r2;$/;"	m	union:frame::__anon12	file:
+r3	Sources/svc.c	/^		int r3;$/;"	m	union:frame::__anon13	file:
+read	Sources/capacitivepads.h	/^    int  (*read)(int); $/;"	m	struct:_capacitivepad_t
+read	Sources/io.c	/^    int (*read)(void * minor_num); $/;"	m	struct:device	file:
+read	Sources/potentiometer.h	/^    unsigned int (*read)(); $/;"	m	struct:_potentiometer_t
+read	Sources/pushbutton.h	/^    int (*read)(void); $/;"	m	struct:_pushbutton_t
+read	Sources/thermistor.h	/^    unsigned int (*read)(); $/;"	m	struct:_thermistor_t
+read	Sources/uart.h	/^    int (*read)(); $/;"	m	struct:_uart_t
+reinitalize_memory	Sources/mymalloc.c	/^void reinitalize_memory(){ $/;"	f
+release	Sources/io.c	/^    int (*release)(void * minor_num); $/;"	m	struct:device	file:
+returnAddr	Sources/svc.c	/^	int returnAddr;$/;"	m	struct:frame	file:
+returnVal	Sources/svc.c	/^		int returnVal;$/;"	m	union:frame::__anon10	file:
+sdramInit	Sources/sdram.c	/^void sdramInit(void) {$/;"	f
+size	Sources/file.h	/^    unsigned size; $/;"	m	struct:_file_t
+size	Sources/mymalloc.h	/^    unsigned size; $/;"	m	struct:_mymalloc_t
+sizeofnode	Sources/mymalloc.c	/^unsigned sizeofnode(void * node){ $/;"	f
+start	Sources/mymalloc.c	/^static char * start; $/;"	v	file:
+stralloc	Sources/stringutils.c	/^char * stralloc(unsigned len){ $/;"	f
+strcompare	Sources/stringutils.c	/^unsigned strcompare(const char * s1, const char * s2){ $/;"	f
+strcopy	Sources/stringutils.c	/^char * strcopy(char * dst, const char * src){ $/;"	f
+strduplicate	Sources/stringutils.c	/^char * strduplicate(const char * src){ $/;"	f
+stream_t	Sources/io.h	/^} stream_t;$/;"	t	typeref:struct:_stream_t
+strlength	Sources/stringutils.c	/^unsigned strlength(const char * string){ $/;"	f
+strlrtrim	Sources/stringutils.c	/^char * strlrtrim(const char * src){ $/;"	f
+strltrim	Sources/stringutils.c	/^char * strltrim(const char * src){ $/;"	f
+strrtrim	Sources/stringutils.c	/^char * strrtrim(const char * src){ $/;"	f
+svcHandler	Sources/svc.c	/^__asm void svcHandler(void) {$/;"	f
+svcHandler	Sources/svc.c	/^void __attribute__((naked)) svcHandler(void) {$/;"	f
+svcHandlerInC	Sources/svc.c	/^void svcHandlerInC(struct frame *framePtr) {$/;"	f
+svcInit_SetSVCPriority	Sources/svc.c	/^void svcInit_SetSVCPriority(unsigned char priority) {$/;"	f
+sw1In	Sources/pushbuttondriver.c	/^int sw1In(void) {$/;"	f
+sw2In	Sources/pushbuttondriver.c	/^int sw2In(void) {$/;"	f
+taken	Sources/mymalloc.c	/^void taken(char *node, unsigned size){ $/;"	f
+thermistor_driver_init	Sources/thermistordriver.c	/^void thermistor_driver_init(void) {$/;"	f
+thermistor_driver_read	Sources/thermistordriver.c	/^unsigned int thermistor_driver_read() {$/;"	f
+thermistor_init	Sources/thermistor.c	/^int thermistor_init(void * minor_num){ $/;"	f
+thermistor_minor_device	Sources/io.h	/^typedef enum { THERMISTOR1} thermistor_minor_device; $/;"	t	typeref:enum:__anon9
+thermistor_read	Sources/thermistor.c	/^int thermistor_read(void *minor_num){ $/;"	f
+thermistor_t	Sources/thermistor.h	/^} thermistor_t;$/;"	t	typeref:struct:_thermistor_t
+thermistors	Sources/thermistor.c	/^thermistor_t thermistors[NUM_OF_THERMISTORS] = { $/;"	v
+threshold	Sources/capacitivepadsdriver.c	/^	uint16_t threshold;$/;"	m	struct:electrodeHW	file:
+true	Sources/common.h	/^typedef enum { false, true } boolean; $/;"	e	enum:__anon1
+uartGetchar	Sources/uartdriver.c	/^char uartGetchar(UART_MemMapPtr uartChannel) {$/;"	f
+uartGetcharPresent	Sources/uartdriver.c	/^int uartGetcharPresent(UART_MemMapPtr uartChannel) {$/;"	f
+uartInit	Sources/uartdriver.c	/^void uartInit(UART_MemMapPtr uartChannel, int clockInKHz, int baud) {$/;"	f
+uartPutchar	Sources/uartdriver.c	/^void uartPutchar(UART_MemMapPtr uartChannel, char ch) {$/;"	f
+uartPuts	Sources/uartdriver.c	/^void uartPuts(UART_MemMapPtr uartChannel, char *p) {$/;"	f
+uart_driver_init	Sources/uartdriver.c	/^void uart_driver_init(void){$/;"	f
+uart_driver_input_present	Sources/uartdriver.c	/^int uart_driver_input_present(){ $/;"	f
+uart_driver_read	Sources/uartdriver.c	/^int uart_driver_read(){$/;"	f
+uart_driver_write	Sources/uartdriver.c	/^int uart_driver_write(int ch){$/;"	f
+uart_driver_writestring	Sources/uartdriver.c	/^void uart_driver_writestring(char *string){ $/;"	f
+uart_init	Sources/uart.c	/^int uart_init(void * minor_num){ $/;"	f
+uart_input_present	Sources/uart.c	/^int uart_input_present(void *minor_num){ $/;"	f
+uart_minor_device	Sources/io.h	/^typedef enum {UART1} uart_minor_device; $/;"	t	typeref:enum:__anon3
+uart_read	Sources/uart.c	/^int uart_read(void *minor_num){ $/;"	f
+uart_t	Sources/uart.h	/^} uart_t;$/;"	t	typeref:struct:_uart_t
+uart_write	Sources/uart.c	/^int uart_write(int ch, void *minor_num){ $/;"	f
+uarts	Sources/uart.c	/^uart_t uarts[NUM_OF_UARTS] = { $/;"	v
+uintptr_t	Sources/capacitivepads.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/file.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/io.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/led.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/potentiometer.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/pushbutton.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/thermistor.c	/^typedef unsigned long uintptr_t; $/;"	t	file:
+uintptr_t	Sources/uart.c	/^typedef unsigned long uintptr_t;$/;"	t	file:
+verify	Sources/capacitivepadsdriver.c	/^int verify(void) {$/;"	f
+verify_file_operations	Sources/main.c	/^void verify_file_operations(){ $/;"	f
+verify_led	Sources/main.c	/^int verify_led(void) {$/;"	f
+verify_memory_allocation	Sources/mymalloc.c	/^void verify_memory_allocation() {$/;"	f
+verify_pushbutton	Sources/main.c	/^int verify_pushbutton(void) {$/;"	f
+verify_uart_lcdc	Sources/main.c	/^void verify_uart_lcdc(){ $/;"	f
+width	Sources/lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
+write	Sources/io.c	/^    int (*write)(int ch, void *minor_num); $/;"	m	struct:device	file:
+write	Sources/lcdc.h	/^    int (*write)(int ch); $/;"	m	struct:_lcdcd_t
+write	Sources/led.h	/^    void (*write)(int ch); $/;"	m	struct:_led_t
+write	Sources/uart.h	/^    int (*write)(int ch); $/;"	m	struct:_uart_t
+write_string	Sources/common.c	/^void write_string(const char *p, unsigned mystdout) {$/;"	f
+x	Sources/lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console
+xPSR	Sources/svc.c	/^	int xPSR;$/;"	m	struct:frame	file:
+y	Sources/lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console

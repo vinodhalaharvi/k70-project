@@ -71,6 +71,6 @@ int SVCMyopen(const char *, unsigned);
 int SVCFgetc(int);
 int SVCFputc(int, int);
 int SVCFClose(int);
-int SVCCreate(char *);
-int SVCDelete(char *);
+int SVCCreate(const char *);
+int SVCDelete(const char *);
 #endif /* ifndef _SVC_H */
