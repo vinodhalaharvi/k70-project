@@ -36,6 +36,8 @@
 #include "delay.h"
 #include "led.h"
 #include "pushbutton.h"
+#include "mymalloc.h"
+#include "file.h"
 #define CHAR_EOF 4
 
 void consoleDemo();
@@ -112,6 +114,48 @@ void verify_uart_lcdc(){
 
 }
 
+void verify_file_operations(){ 
+    int fd; 
+    int ch; 
+    unsigned i; 
+    const char * filename = "/tmp/test.txt"; 
+    if (!is_memory_initialized()){ 
+        initmemory(); 
+    }
+    fd = myopen(filename, FILE_CREATE); 
+    fd = myopen("/tmp/test1.txt", FILE_CREATE); 
+    fd = myopen("/tmp/test2.txt", FILE_CREATE); 
+    fd = myopen("/tmp/test3.txt", FILE_CREATE); 
+    i = 0; 
+    const char * string = "hello world!"; 
+    char print_string[1000];
+
+    sprintf(print_string, "Writing string '%s %s' to the file\n", string, filename); 
+    write_string(print_string, mystdout); 
+    do {
+        mywrite(fd, string[i]); 
+    } while(string[i++]);
+
+    sprintf(print_string, "Reading from file %s\n", filename);
+    write_string(print_string, mystdout); 
+    while((ch = myread(fd)) != EOF){ 
+        mywrite(mystdout, ch); 
+    }
+
+    sprintf(print_string, "\n%s\n", "Files before ..");
+    write_string(print_string, mystdout); 
+
+    ls(); 
+    delete_file(filename); 
+    sprintf(print_string, "Files after deleting file %s:\n", filename);
+    write_string(print_string, mystdout); 
+
+    ls(); 
+    sprintf(print_string, "\n");
+    write_string(print_string, mystdout); 
+}
+
+
 int main(void) {
     /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
      * (peripheral) clock is set to 60 MHz.*/
@@ -120,8 +164,11 @@ int main(void) {
     init_devices_fdtable(); 
     mystdin = myopen("/dev/uart/1", 0); 
     mystdout = myopen("/dev/lcdc/1", 0); 
-    verify_uart_lcdc(); 
+    //verify_uart_lcdc(); 
     //verify_led(); 
     //verify_pushbutton(); 
+    verify_file_operations(); 
     return 0;
 }
+
+

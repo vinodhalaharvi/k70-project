@@ -8,6 +8,7 @@
 #include "stringutils.h"
 #include "common.h"
 #include "assert.h"
+#include "file.h"
 
 typedef unsigned long uintptr_t; 
 
@@ -168,12 +169,11 @@ int myopen(const char * filepath, unsigned mode){
         fd = get_fd(major_num, minor_num); 
         devices[major_num].init((void *) (uintptr_t) minor_num); 
         return fd; 
-    } /*else { 
+    } else { 
         if (!isfileexists(filepath)){ 
             if (mode == FILE_CREATE){ 
                 create_file(filepath); 
                 minor_num = get_file_inode(filepath); 
-                myassert(minor_num != -1, "", "minor_num != -1"); 
                 devices[major_num].init((void *) (uintptr_t) minor_num); 
                 fd = create_fd(major_num, minor_num); 
                 return fd; 
@@ -181,11 +181,9 @@ int myopen(const char * filepath, unsigned mode){
         } else { 
             minor_num = get_file_inode(filepath); 
             fd = get_fd(major_num, minor_num); 
-            myassert(fd != -1, "", "fd != -1"); 
             return fd; 
-            //file does not exists
         } 
-    }*/
+    }
     return -1; 
 }
 
@@ -222,63 +220,6 @@ int myread(int fd){
 void cat(unsigned fd){ 
     int  ch; 
     while((ch = myread(fd)) != EOF){ 
-        mywrite(ch, mystdout); 
+        mywrite(mystdout, ch); 
     }
 }
-
-
-void verify_io(){
-    init_devices_fdtable(); 
-    print_fdtable(); 
-    create_fd(2, 0); 
-    print_fdtable(); 
-    print_fdtable(); 
-    unsigned fd = myopen("/dev/uart/1", 0); 
-    fd = myopen("/dev/lcdc/1", 0); 
-    printf("fd of %s is %d\n", "/dev/lcdc/1", fd);
-    printf("fd of %s (0, 0) is: %d\n", get_device_path(0, 0), get_fd(0, 0));
-    myclose(0); 
-    myclose(1); 
-    print_fdtable(); 
-}
-
-
-
-/*void verify_device_independent_file_operations(){ 
-    int fd; 
-    int ch; 
-    unsigned i; 
-    const char * filename = "/tmp/test.txt"; 
-    if (!is_memory_initialized()){ 
-        initmemory(); 
-    }
-    init_fdtable(); 
-    fd = myopen(filename, FILE_CREATE); 
-    fd = myopen("/tmp/test1.txt", FILE_CREATE); 
-    fd = myopen("/tmp/test2.txt", FILE_CREATE); 
-    fd = myopen("/tmp/test3.txt", FILE_CREATE); 
-    myassert(fd != -1, "", "fd != -1"); 
-    i = 0; 
-    const char * string = "hello world!"; 
-    char * print_string = (char *) mymalloc(1000);  
-    sprintf(print_string, "Writing string '%s %s' to the file\n", string, filename); 
-    write_string(print_string, mystdout); 
-    do {
-        mywrite(fd, string[i]); 
-    } while(string[i++]);
-    print_string = (char *) mymalloc(1000);  
-    sprintf(print_string, "Reading from file %s\n", filename);
-    write_string(print_string, mystdout); 
-    while((ch = myread(fd)) != EOF){ 
-        mywrite(ch, mystdout); 
-    }
-    sprintf(print_string, "\n%s\n", "Files before ..");
-    write_string(print_string, mystdout); 
-    ls(); 
-    delete_file(filename); 
-    sprintf(print_string, "Files after deleting file %s:\n", filename);
-    write_string(print_string, mystdout); 
-    ls(); 
-    sprintf(print_string, "\n");
-    write_string(print_string, mystdout); 
-}*/
