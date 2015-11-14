@@ -39,7 +39,8 @@ void reinitalize_memory(){
 }
 
 unsigned initmemory(){ 
-    initmemory_sdram(); 
+    //initmemory_sdram(); 
+    initmemory_ram(); 
     return 1; 
 }
 
@@ -108,7 +109,7 @@ void printnode(char *trav){
     //sprintf(print_string, "addr= %p ", (void *)trav);
     sprintf(print_string, "addr= %p ", ((mymalloc_t *) (trav))->data); 
     write_string(print_string, mystdout); 
-    sprintf(print_string, "size=%lu ", ((mymalloc_t *) trav)->size - sizeof(mymalloc_t));
+    sprintf(print_string, "size=%u ", ((mymalloc_t *) trav)->size - sizeof(mymalloc_t));
     write_string(print_string, mystdout); 
     //sprintf(print_string, "size=%u ", ((mymalloc_t *) trav)->size);
     sprintf(print_string, "status=%s \n", 

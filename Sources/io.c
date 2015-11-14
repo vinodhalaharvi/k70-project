@@ -79,6 +79,7 @@ void init_fdtable(){
     init_devices_fdtable();
 }
 
+
 static struct device {
     int (*init)(void * minor_num); 
     int (*release)(void * minor_num); 
@@ -92,7 +93,12 @@ static struct device {
 //static map
 int isdevice(int major_num) { 
     return (major_num == UART) 
-        ||  (major_num == LCDC); 
+        ||  (major_num == LCDC)
+        ||  (major_num == PUSHBUTTON)
+        ||  (major_num == LED)
+        ||  (major_num == CAPACITIVEPAD)
+        ||  (major_num == POTENTIOMETER)
+        ||  (major_num == THERMISTOR); 
 }
 
 int isfile(int major_num){ 
@@ -115,13 +121,14 @@ int get_minor_num(const char * filepath){
 }
 
 int get_major_num(const char * filepath){ 
-    if (strstr(filepath, "/dev/uart")){ 
-        return UART; 
-    } else if (strstr(filepath, "/dev/lcdc")){ 
-        return LCDC; 
-    } else { 
-        return -1; 
-    }
+    if (strstr(filepath, "/dev/uart")) { return UART; } 
+    else if (strstr(filepath, "/dev/lcdc")){ return LCDC; } 
+    else if (strstr(filepath, "/dev/led")){ return LED; }
+    else if (strstr(filepath, "/dev/pushbutton")){ return PUSHBUTTON; }
+    else if (strstr(filepath, "/dev/thermistor")){ return THERMISTOR; }
+    else if (strstr(filepath, "/dev/potentiometer")){ return POTENTIOMETER; }
+    else if (strstr(filepath, "/dev/capacitivepad")){ return CAPACITIVEPAD; }
+    else return _FILE; 
 }
 
 

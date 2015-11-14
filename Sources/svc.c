@@ -498,7 +498,6 @@ void svcHandlerInC(struct frame *framePtr) {
     unsigned size; 
     void * addr; 
     unsigned mode; 
-    char print_string[1000]; 
 	switch(((unsigned char *)framePtr->returnAddr)[-2]) {
 	case SVC_LED_INIT:
         minor_num = (void *) framePtr->arg0; 

@@ -22,6 +22,7 @@
 "./Sources/lcdcConsole.o"
 "./Sources/lcdc.o"
 "./Sources/io.o"
+"./Sources/file.o"
 "./Sources/delay.o"
 "./Sources/common.o"
 "./Sources/capacitivepadsdriver.o"

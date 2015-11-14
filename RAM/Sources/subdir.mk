@@ -10,6 +10,7 @@ C_SRCS_QUOTED += \
 "../Sources/capacitivepadsdriver.c" \
 "../Sources/common.c" \
 "../Sources/delay.c" \
+"../Sources/file.c" \
 "../Sources/io.c" \
 "../Sources/lcdc.c" \
 "../Sources/lcdcConsole.c" \
@@ -37,6 +38,7 @@ C_SRCS += \
 ../Sources/capacitivepadsdriver.c \
 ../Sources/common.c \
 ../Sources/delay.c \
+../Sources/file.c \
 ../Sources/io.c \
 ../Sources/lcdc.c \
 ../Sources/lcdcConsole.c \
@@ -64,6 +66,7 @@ OBJS += \
 ./Sources/capacitivepadsdriver.o \
 ./Sources/common.o \
 ./Sources/delay.o \
+./Sources/file.o \
 ./Sources/io.o \
 ./Sources/lcdc.o \
 ./Sources/lcdcConsole.o \
@@ -91,6 +94,7 @@ C_DEPS += \
 ./Sources/capacitivepadsdriver.d \
 ./Sources/common.d \
 ./Sources/delay.d \
+./Sources/file.d \
 ./Sources/io.d \
 ./Sources/lcdc.d \
 ./Sources/lcdcConsole.d \
@@ -118,6 +122,7 @@ OBJS_QUOTED += \
 "./Sources/capacitivepadsdriver.o" \
 "./Sources/common.o" \
 "./Sources/delay.o" \
+"./Sources/file.o" \
 "./Sources/io.o" \
 "./Sources/lcdc.o" \
 "./Sources/lcdcConsole.o" \
@@ -145,6 +150,7 @@ C_DEPS_QUOTED += \
 "./Sources/capacitivepadsdriver.d" \
 "./Sources/common.d" \
 "./Sources/delay.d" \
+"./Sources/file.d" \
 "./Sources/io.d" \
 "./Sources/lcdc.d" \
 "./Sources/lcdcConsole.d" \
@@ -172,6 +178,7 @@ OBJS_OS_FORMAT += \
 ./Sources/capacitivepadsdriver.o \
 ./Sources/common.o \
 ./Sources/delay.o \
+./Sources/file.o \
 ./Sources/io.o \
 ./Sources/lcdc.o \
 ./Sources/lcdcConsole.o \
@@ -228,9 +235,17 @@ Sources/delay.o: ../Sources/delay.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/io.o: ../Sources/io.c
+Sources/file.o: ../Sources/file.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #5 $<'
+	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/file.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/file.o"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Sources/io.o: ../Sources/io.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #6 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/io.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/io.o"
 	@echo 'Finished building: $<'
@@ -238,7 +253,7 @@ Sources/io.o: ../Sources/io.c
 
 Sources/lcdc.o: ../Sources/lcdc.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #6 $<'
+	@echo 'Executing target #7 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/lcdc.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/lcdc.o"
 	@echo 'Finished building: $<'
@@ -246,7 +261,7 @@ Sources/lcdc.o: ../Sources/lcdc.c
 
 Sources/lcdcConsole.o: ../Sources/lcdcConsole.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #7 $<'
+	@echo 'Executing target #8 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/lcdcConsole.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/lcdcConsole.o"
 	@echo 'Finished building: $<'
@@ -254,7 +269,7 @@ Sources/lcdcConsole.o: ../Sources/lcdcConsole.c
 
 Sources/lcdcdriver.o: ../Sources/lcdcdriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #8 $<'
+	@echo 'Executing target #9 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/lcdcdriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/lcdcdriver.o"
 	@echo 'Finished building: $<'
@@ -262,7 +277,7 @@ Sources/lcdcdriver.o: ../Sources/lcdcdriver.c
 
 Sources/led.o: ../Sources/led.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #9 $<'
+	@echo 'Executing target #10 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/led.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/led.o"
 	@echo 'Finished building: $<'
@@ -270,7 +285,7 @@ Sources/led.o: ../Sources/led.c
 
 Sources/leddriver.o: ../Sources/leddriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #10 $<'
+	@echo 'Executing target #11 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/leddriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/leddriver.o"
 	@echo 'Finished building: $<'
@@ -278,7 +293,7 @@ Sources/leddriver.o: ../Sources/leddriver.c
 
 Sources/main.o: ../Sources/main.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #11 $<'
+	@echo 'Executing target #12 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/main.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/main.o"
 	@echo 'Finished building: $<'
@@ -286,7 +301,7 @@ Sources/main.o: ../Sources/main.c
 
 Sources/mcg.o: ../Sources/mcg.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #12 $<'
+	@echo 'Executing target #13 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/mcg.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/mcg.o"
 	@echo 'Finished building: $<'
@@ -294,7 +309,7 @@ Sources/mcg.o: ../Sources/mcg.c
 
 Sources/mymalloc.o: ../Sources/mymalloc.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #13 $<'
+	@echo 'Executing target #14 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/mymalloc.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/mymalloc.o"
 	@echo 'Finished building: $<'
@@ -302,7 +317,7 @@ Sources/mymalloc.o: ../Sources/mymalloc.c
 
 Sources/potentiometer.o: ../Sources/potentiometer.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #14 $<'
+	@echo 'Executing target #15 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/potentiometer.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/potentiometer.o"
 	@echo 'Finished building: $<'
@@ -310,7 +325,7 @@ Sources/potentiometer.o: ../Sources/potentiometer.c
 
 Sources/potentiometerdriver.o: ../Sources/potentiometerdriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #15 $<'
+	@echo 'Executing target #16 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/potentiometerdriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/potentiometerdriver.o"
 	@echo 'Finished building: $<'
@@ -318,7 +333,7 @@ Sources/potentiometerdriver.o: ../Sources/potentiometerdriver.c
 
 Sources/profont.o: ../Sources/profont.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #16 $<'
+	@echo 'Executing target #17 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/profont.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/profont.o"
 	@echo 'Finished building: $<'
@@ -326,7 +341,7 @@ Sources/profont.o: ../Sources/profont.c
 
 Sources/pushbutton.o: ../Sources/pushbutton.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #17 $<'
+	@echo 'Executing target #18 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/pushbutton.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/pushbutton.o"
 	@echo 'Finished building: $<'
@@ -334,7 +349,7 @@ Sources/pushbutton.o: ../Sources/pushbutton.c
 
 Sources/pushbuttondriver.o: ../Sources/pushbuttondriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #18 $<'
+	@echo 'Executing target #19 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/pushbuttondriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/pushbuttondriver.o"
 	@echo 'Finished building: $<'
@@ -342,7 +357,7 @@ Sources/pushbuttondriver.o: ../Sources/pushbuttondriver.c
 
 Sources/sdram.o: ../Sources/sdram.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #19 $<'
+	@echo 'Executing target #20 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/sdram.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/sdram.o"
 	@echo 'Finished building: $<'
@@ -350,7 +365,7 @@ Sources/sdram.o: ../Sources/sdram.c
 
 Sources/stringutils.o: ../Sources/stringutils.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #20 $<'
+	@echo 'Executing target #21 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/stringutils.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/stringutils.o"
 	@echo 'Finished building: $<'
@@ -358,7 +373,7 @@ Sources/stringutils.o: ../Sources/stringutils.c
 
 Sources/svc.o: ../Sources/svc.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #21 $<'
+	@echo 'Executing target #22 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/svc.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/svc.o"
 	@echo 'Finished building: $<'
@@ -366,7 +381,7 @@ Sources/svc.o: ../Sources/svc.c
 
 Sources/thermistor.o: ../Sources/thermistor.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #22 $<'
+	@echo 'Executing target #23 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/thermistor.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/thermistor.o"
 	@echo 'Finished building: $<'
@@ -374,7 +389,7 @@ Sources/thermistor.o: ../Sources/thermistor.c
 
 Sources/thermistordriver.o: ../Sources/thermistordriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #23 $<'
+	@echo 'Executing target #24 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/thermistordriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/thermistordriver.o"
 	@echo 'Finished building: $<'
@@ -382,7 +397,7 @@ Sources/thermistordriver.o: ../Sources/thermistordriver.c
 
 Sources/uart.o: ../Sources/uart.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #24 $<'
+	@echo 'Executing target #25 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/uart.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/uart.o"
 	@echo 'Finished building: $<'
@@ -390,7 +405,7 @@ Sources/uart.o: ../Sources/uart.c
 
 Sources/uartdriver.o: ../Sources/uartdriver.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #25 $<'
+	@echo 'Executing target #26 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/uartdriver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/uartdriver.o"
 	@echo 'Finished building: $<'

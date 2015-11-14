@@ -31,7 +31,8 @@ Sources/io.o: ../Sources/io.c \
  ../Sources/stringutils.h ../Sources/common.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert \
- C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h \
+ ../Sources/file.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -104,3 +105,5 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert.h:
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert:
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h:
+
+../Sources/file.h:

@@ -28,7 +28,7 @@ Sources/main.o: ../Sources/main.c \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
  ../Sources/common.h ../Sources/delay.h ../Sources/led.h \
- ../Sources/pushbutton.h
+ ../Sources/pushbutton.h ../Sources/mymalloc.h ../Sources/file.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -97,3 +97,7 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM
 ../Sources/led.h:
 
 ../Sources/pushbutton.h:
+
+../Sources/mymalloc.h:
+
+../Sources/file.h:
