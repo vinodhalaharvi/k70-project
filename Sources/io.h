@@ -61,4 +61,5 @@ void assert_memory_is_initialized();
 void verify_device_independent_file_operations(); 
 void init_devices_fdtable(); 
 void cat(unsigned fd); 
+void init_fdtable(); 
 #endif

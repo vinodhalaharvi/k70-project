@@ -13,8 +13,7 @@ Sources/lcdcdriver.o: ../Sources/lcdcdriver.c \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_lib_ext1.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_rsize_t.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h \
- C:/Users/vhalaharvi/workspace/first/Project_Headers/derivative.h \
- C:/Users/vhalaharvi/workspace/first/Project_Headers/MK70F12.h \
+ ../Sources/derivative.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h \
@@ -48,9 +47,7 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_rsize_t.h:
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h:
 
-C:/Users/vhalaharvi/workspace/first/Project_Headers/derivative.h:
-
-C:/Users/vhalaharvi/workspace/first/Project_Headers/MK70F12.h:
+../Sources/derivative.h:
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h:
 
