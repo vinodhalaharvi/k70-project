@@ -32,7 +32,9 @@ Sources/io.o: ../Sources/io.c \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h \
- ../Sources/file.h
+ ../Sources/file.h ../Sources/led.h ../Sources/pushbutton.h \
+ ../Sources/potentiometer.h ../Sources/thermistor.h \
+ ../Sources/capacitivepads.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -107,3 +109,13 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert:
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h:
 
 ../Sources/file.h:
+
+../Sources/led.h:
+
+../Sources/pushbutton.h:
+
+../Sources/potentiometer.h:
+
+../Sources/thermistor.h:
+
+../Sources/capacitivepads.h:

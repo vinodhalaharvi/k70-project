@@ -117,7 +117,7 @@ void ls(){
             write_string(filesystem[i]->filename, mystdout);
         }
     }
-    write_string("\n", mystdout);
+    write_string("\r\n", mystdout);
 }
 
 int fileinit(void * minor_num) { 

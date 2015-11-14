@@ -130,28 +130,29 @@ void verify_file_operations(){
     const char * string = "hello world!"; 
     char print_string[1000];
 
-    sprintf(print_string, "Writing string '%s %s' to the file\n", string, filename); 
+    sprintf(print_string, "Writing string '%s %s' to the file\r\n", 
+    		string, filename); 
     write_string(print_string, mystdout); 
     do {
         mywrite(fd, string[i]); 
     } while(string[i++]);
 
-    sprintf(print_string, "Reading from file %s\n", filename);
+    sprintf(print_string, "Reading from file %s\r\n", filename);
     write_string(print_string, mystdout); 
     while((ch = myread(fd)) != EOF){ 
         mywrite(mystdout, ch); 
     }
 
-    sprintf(print_string, "\n%s\n", "Files before ..");
+    sprintf(print_string, "\r\n%s\r\n", "Files before ..");
     write_string(print_string, mystdout); 
 
     ls(); 
     delete_file(filename); 
-    sprintf(print_string, "Files after deleting file %s:\n", filename);
+    sprintf(print_string, "Files after deleting file %s:\r\n", filename);
     write_string(print_string, mystdout); 
 
     ls(); 
-    sprintf(print_string, "\n");
+    sprintf(print_string, "\r\n");
     write_string(print_string, mystdout); 
 }
 
