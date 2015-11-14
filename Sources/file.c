@@ -115,6 +115,7 @@ void ls(){
         myassert(i <= MAX_FS_ENTRIES, "", "index <= MAX_FS_ENTRIES"); 
         if (filesystem[i] && filesystem[i]->filename){ 
             write_string(filesystem[i]->filename, mystdout);
+            write_string("\r\n", mystdout);
         }
     }
     write_string("\r\n", mystdout);
